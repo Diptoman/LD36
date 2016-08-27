@@ -105,6 +105,7 @@
       <sprite>sprites\spr_neutral</sprite>
       <sprite>sprites\spr_pluspoint</sprite>
       <sprite>sprites\spr_minuspoint</sprite>
+      <sprite>sprites\spr_blankArea</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -197,6 +198,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
+    <room>rooms\room1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

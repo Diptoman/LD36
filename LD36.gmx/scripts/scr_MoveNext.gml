@@ -251,12 +251,42 @@ Move to next grid based on final currentDirection
 if (canMove)
 {
     if (currentDirection == "l")
+    {
+        xDirectionSign = -1;
+        yDirectionSign = 0;
         TweenFire(id,x__,EaseLinear,0,0,0,global.alarmTiming,x,x-32);
+    }
     else if (currentDirection == "r")
+    {
+        xDirectionSign = 1;
+        yDirectionSign = 0;
         TweenFire(id,x__,EaseLinear,0,0,0,global.alarmTiming,x,x+32);
+    }
     else if (currentDirection == "u")
+    {
+        xDirectionSign = 0;
+        yDirectionSign = -1;
         TweenFire(id,y__,EaseLinear,0,0,0,global.alarmTiming,y,y-32);
+    }
     else if (currentDirection == "d")
+    {
+        xDirectionSign = 0;
+        yDirectionSign = 1;
         TweenFire(id,y__,EaseLinear,0,0,0,global.alarmTiming,y,y+32);
+    }
         
 }
+
+//Destroy if next grid is not a tile
+if (collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_path,0,1) 
+    || collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_directionalPath,0,1) 
+    || collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_directionalSplitter,0,1)
+    || collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_portal,0,1)
+    || collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_end,0,1)
+    || collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_colorShifter,0,1)
+    || collision_point(x,y,obj_end,0,1))
+{
+    
+}
+else
+    instance_destroy();
