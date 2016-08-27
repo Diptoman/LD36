@@ -100,10 +100,7 @@
       <sprite>sprites\spr_minusTop</sprite>
       <sprite>sprites\spr_minus</sprite>
       <sprite>sprites\spr_portal</sprite>
-      <sprite>sprites\spr_portal1</sprite>
-      <sprite>sprites\spr_portal2</sprite>
-      <sprite>sprites\spr_portal3</sprite>
-      <sprite>sprites\spr_portal4</sprite>
+      <sprite>sprites\spr_portalBase</sprite>
       <sprite>sprites\spr_colorShifter</sprite>
       <sprite>sprites\spr_neutral</sprite>
       <sprite>sprites\spr_pluspoint</sprite>
