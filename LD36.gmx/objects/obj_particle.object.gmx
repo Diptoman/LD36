@@ -33,12 +33,10 @@ currentDirection = ""; //"l", "r", "u", "d"
 //Create shadow
 alarm[1] = 1;
 
-//First time inits
-alarm[3] = 1;
-
 //Decide where to move next
 alarm[4] = 1;
 
+rotationAngle = 0;
 </string>
           </argument>
         </arguments>
@@ -81,30 +79,6 @@ else if (currentDirection == "d")
 {
     scr_MoveNextFirst(0,1);
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="3">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Rotation
-TweenFire(id,image_angle__,EaseLinear,3,0,0,global.alarmTiming*4,0,360);
 </string>
           </argument>
         </arguments>
@@ -221,14 +195,20 @@ else if (currentDirection == "d")
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (type == "+")
+            <string>///Sprite and rotation
+if (type == "+")
 {
     sprite_index = spr_plus;
+    rotatorSprite = spr_plusTop;
 }
 else
 {
     sprite_index = spr_minus;
+    rotatorSprite = spr_minusTop;
 }
+
+rotationAngle += 60/global.alarmTiming;
+rotationAngle = rotationAngle mod 360;
 </string>
           </argument>
         </arguments>
@@ -252,9 +232,12 @@ else
           <argument>
             <kind>1</kind>
             <string>draw_self();
+draw_sprite_ext(rotatorSprite,0,x,y,image_xscale,image_yscale,rotationAngle,c_white,image_alpha);
 draw_set_halign(fa_center);
 draw_set_valign(fa_center);
 draw_text(x,y,string(currentDirection));
+
+
 </string>
           </argument>
         </arguments>

@@ -97,6 +97,7 @@
     <sprites name="Main">
       <sprite>sprites\spr_plus</sprite>
       <sprite>sprites\spr_plusTop</sprite>
+      <sprite>sprites\spr_minusTop</sprite>
       <sprite>sprites\spr_minus</sprite>
       <sprite>sprites\spr_portal</sprite>
       <sprite>sprites\spr_portal1</sprite>
@@ -108,7 +109,6 @@
       <sprite>sprites\spr_pluspoint</sprite>
       <sprite>sprites\spr_minuspoint</sprite>
     </sprites>
-    <sprite>sprites\spr_minusTop</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
