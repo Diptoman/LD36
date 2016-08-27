@@ -4,6 +4,17 @@ var decisionMade = false;
 canMove = true;
 
 /*
+Check for end point
+*/
+endPoint = collision_point(x,y,obj_end,0,1);
+if (endPoint)
+{
+    canMove = false;
+    decisionMade = true;
+}
+
+
+/*
 Check for existing collision of particles in the same grid
 */
 otherParticle = collision_point(x,y,obj_particle,0,1);
@@ -28,11 +39,36 @@ if (otherParticle)
     }
     else //If opposite sign
     {
+        instance_create(x,y,obj_neutralParticle);
+        alarm[2] = 1; //Destroy this
     }
     
 }
 
-//Check for 
+/*
+Check for neutral particle collision
+*/
+if ((!decisionMade) && (canMove))
+{
+    //No collision with other particle
+    neutralParticle = collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_neutralParticle,0,1);
+    if (neutralParticle)
+    {
+        //Move in reverse
+        if (xDirectionSign != 0) //If left or right
+        {
+            //Change currentDirection
+            if (currentDirection == "l") currentDirection = "r";
+            else if (currentDirection == "r") currentDirection = "l";
+        }
+        else //If up or down
+        {
+            //Change currentDirection
+            if (currentDirection == "d") currentDirection = "u";
+            else if (currentDirection == "u") currentDirection = "d";
+        }
+    }
+}
 
 /*
 Check for path in the next grid. Can only move if there is a path
@@ -70,6 +106,8 @@ if ((!decisionMade) && (canMove))
         }
         else //If opposite sign
         {
+            instance_create(x,y,obj_neutralParticle);
+            alarm[2] = 1; //Destroy this
         }
     }
 }

@@ -91,7 +91,8 @@
     <sprites name="Main">
       <sprite>sprites\spr_plus</sprite>
       <sprite>sprites\spr_minus</sprite>
-      <sprite>sprites\obj_pluspoint</sprite>
+      <sprite>sprites\spr_neutral</sprite>
+      <sprite>sprites\spr_pluspoint</sprite>
       <sprite>sprites\spr_minuspoint</sprite>
     </sprites>
   </sprites>
@@ -161,7 +162,9 @@
     <objects name="Main">
       <object>objects\obj_particleShadow</object>
       <object>objects\obj_particle</object>
+      <object>objects\obj_neutralParticle</object>
       <object>objects\obj_controller</object>
+      <object>objects\obj_end</object>
     </objects>
     <objects name="TweenGMS">
       <object>objects\obj_SharedTweener</object>
