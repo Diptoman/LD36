@@ -13,36 +13,53 @@ if (endPoint)
     decisionMade = true;
 }
 
+/*
+Check for portals
+*/
+if ((!decisionMade) && (canMove))
+{
+    portal = collision_point(x,y,obj_portal,0,1);
+    if (portal)
+    {
+        //Teleport!
+        x = (portal.destinationID).x;
+        y = (portal.destinationID).y;
+    }
+}
+
 
 /*
 Check for existing collision of particles in the same grid
 */
-otherParticle = collision_point(x,y,obj_particle,0,1);
-if (otherParticle)
+if ((!decisionMade) && (canMove))
 {
-    //If same sign
-    if (otherParticle.type == type)
+    otherParticle = collision_point(x,y,obj_particle,0,1);
+    if (otherParticle)
     {
-        //Move in reverse
-        if (xDirectionSign != 0) //If left or right
+        //If same sign
+        if (otherParticle.type == type)
         {
-            //Change currentDirection
-            if (currentDirection == "l") currentDirection = "r";
-            else if (currentDirection == "r") currentDirection = "l";
+            //Move in reverse
+            if (xDirectionSign != 0) //If left or right
+            {
+                //Change currentDirection
+                if (currentDirection == "l") currentDirection = "r";
+                else if (currentDirection == "r") currentDirection = "l";
+            }
+            else //If up or down
+            {
+                //Change currentDirection
+                if (currentDirection == "d") currentDirection = "u";
+                else if (currentDirection == "u") currentDirection = "d";
+            }
         }
-        else //If up or down
+        else //If opposite sign
         {
-            //Change currentDirection
-            if (currentDirection == "d") currentDirection = "u";
-            else if (currentDirection == "u") currentDirection = "d";
+            instance_create(x,y,obj_neutralParticle);
+            alarm[2] = 1; //Destroy this
         }
-    }
-    else //If opposite sign
-    {
-        instance_create(x,y,obj_neutralParticle);
-        alarm[2] = 1; //Destroy this
-    }
     
+    }
 }
 
 /*

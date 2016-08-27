@@ -91,6 +91,7 @@
     <sprites name="Main">
       <sprite>sprites\spr_plus</sprite>
       <sprite>sprites\spr_minus</sprite>
+      <sprite>sprites\spr_portal</sprite>
       <sprite>sprites\spr_neutral</sprite>
       <sprite>sprites\spr_pluspoint</sprite>
       <sprite>sprites\spr_minuspoint</sprite>
@@ -158,6 +159,7 @@
       <object>objects\obj_luPath</object>
       <object>objects\obj_ruPath</object>
       <object>objects\obj_directionalPath</object>
+      <object>objects\obj_portal</object>
     </objects>
     <objects name="Main">
       <object>objects\obj_particleShadow</object>
