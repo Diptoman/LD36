@@ -27,6 +27,51 @@ if ((!decisionMade) && (canMove))
     }
 }
 
+/*
+Check for splitters
+*/
+if ((!decisionMade) && (canMove))
+{
+    splitter = collision_point(x,y,obj_directionalSplitter,0,1);
+    if (splitter)
+    {
+        //Left split
+        if ((splitter.direction1 == "l") || (splitter.direction2 == "l")) 
+        {
+            particleObj = instance_create(x-32,y,obj_particle);
+            particleObj.type = type;
+            particleObj.currentDirection = "l";
+        }
+        //Right split
+        if ((splitter.direction1 == "r") || (splitter.direction2 == "r")) 
+        {
+            particleObj = instance_create(x+32,y,obj_particle);
+            particleObj.type = type;
+            particleObj.currentDirection = "r";
+        }
+        //Up split
+        if ((splitter.direction1 == "u") || (splitter.direction2 == "u")) 
+        {
+            particleObj = instance_create(x,y-32,obj_particle);
+            particleObj.type = type;
+            particleObj.currentDirection = "u";
+        }
+        //Down split
+        if ((splitter.direction1 == "d") || (splitter.direction2 == "d")) 
+        {
+            particleObj = instance_create(x,y+32,obj_particle);
+            particleObj.type = type;
+            particleObj.currentDirection = "d";
+        }
+        //Stop other actions and delete this
+        decisionMade = true;
+        alarm[2] = 1;
+        //Change splitter to normal tile
+        instance_create(splitter.x,splitter.y,obj_path);
+        with (splitter) instance_destroy();
+    }
+}
+
 
 /*
 Check for existing collision of particles in the same grid
