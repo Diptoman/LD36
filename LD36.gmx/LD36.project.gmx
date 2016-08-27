@@ -86,12 +86,19 @@
       <sprite>sprites\spr_rdPath</sprite>
       <sprite>sprites\spr_luPath</sprite>
       <sprite>sprites\spr_ruPath</sprite>
+      <sprite>sprites\spr_ldSplitter</sprite>
+      <sprite>sprites\spr_rdSplitter</sprite>
+      <sprite>sprites\spr_luSplitter</sprite>
+      <sprite>sprites\spr_ruSplitter</sprite>
+      <sprite>sprites\spr_rlSplitter</sprite>
+      <sprite>sprites\spr_udSplitter</sprite>
       <sprite>sprites\spr_test</sprite>
     </sprites>
     <sprites name="Main">
       <sprite>sprites\spr_plus</sprite>
       <sprite>sprites\spr_minus</sprite>
       <sprite>sprites\spr_portal</sprite>
+      <sprite>sprites\spr_splitter</sprite>
       <sprite>sprites\spr_neutral</sprite>
       <sprite>sprites\spr_pluspoint</sprite>
       <sprite>sprites\spr_minuspoint</sprite>
@@ -160,6 +167,13 @@
       <object>objects\obj_ruPath</object>
       <object>objects\obj_directionalPath</object>
       <object>objects\obj_portal</object>
+      <object>objects\obj_ldSplitter</object>
+      <object>objects\obj_rdSplitter</object>
+      <object>objects\obj_luSplitter</object>
+      <object>objects\obj_ruSplitter</object>
+      <object>objects\obj_rlSplitter</object>
+      <object>objects\obj_udSplitter</object>
+      <object>objects\obj_directionalSplitter</object>
     </objects>
     <objects name="Main">
       <object>objects\obj_particleShadow</object>
