@@ -3,7 +3,9 @@ var yDirectionSign = argument1; //+1, 0 or -1
 var decisionMade = false;
 canMove = true;
 
-//Check for existing collision of particles in the same grid
+/*
+Check for existing collision of particles in the same grid
+*/
 otherParticle = collision_point(x,y,obj_particle,0,1);
 if (otherParticle)
 {
@@ -32,13 +34,17 @@ if (otherParticle)
 
 //Check for 
 
-//Check for path. Can only move if there is a path
+/*
+Check for path in the next grid. Can only move if there is a path
+*/
 if (collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_path,0,0) && (!decisionMade))
 {
     canMove = true;
 }
 
-//Decide next movement if previous conditions not met
+/*
+Check for collisions with other particles in the next grid
+*/
 if ((!decisionMade) && (canMove))
 {
     //No collision with other particle
@@ -68,7 +74,63 @@ if ((!decisionMade) && (canMove))
     }
 }
 
-//Move to next grid based on final currentDirection
+/*
+Check for direction changer
+*/
+if ((!decisionMade) && (canMove))
+{
+    directionChanger = collision_point(x,y,obj_directionalPath,0,1);
+    if (directionChanger)
+    {
+        var changeDirection;
+        changeDirection = false;
+        
+        if (currentDirection == "l") //Left
+        {
+            if ((directionChanger.direction1 == "r") || (directionChanger.direction2 == "r"))
+            {
+                changeDirection = true;
+                //Change currentDirection
+                if (directionChanger.direction1 == "r") currentDirection = directionChanger.direction2;
+                else currentDirection = directionChanger.direction1;
+            }
+        } 
+        else if (currentDirection == "r") //Right
+        {
+            if ((directionChanger.direction1 == "l") || (directionChanger.direction2 == "l"))
+            {
+                changeDirection = true;
+                //Change currentDirection
+                if (directionChanger.direction1 == "l") currentDirection = directionChanger.direction2;
+                else currentDirection = directionChanger.direction1;
+            }
+        }
+        else if (currentDirection == "u") //Up
+        {
+            if ((directionChanger.direction1 == "d") || (directionChanger.direction2 == "d"))
+            {
+                changeDirection = true;
+                //Change currentDirection
+                if (directionChanger.direction1 == "d") currentDirection = directionChanger.direction2;
+                else currentDirection = directionChanger.direction1;
+            }
+        }
+        else if (currentDirection == "d") //Down
+        {
+            if ((directionChanger.direction1 == "u") || (directionChanger.direction2 == "u"))
+            {
+                changeDirection = true;
+                //Change currentDirection
+                if (directionChanger.direction1 == "u") currentDirection = directionChanger.direction2;
+                else currentDirection = directionChanger.direction1;
+            }
+        }
+    }
+}
+
+/*
+Move to next grid based on final currentDirection
+*/
 if (canMove)
 {
     if (currentDirection == "l")

@@ -82,7 +82,10 @@
   <sprites name="sprites">
     <sprites name="User Elements">
       <sprite>sprites\spr_path</sprite>
-      <sprite>sprites\spr_directionalPath</sprite>
+      <sprite>sprites\spr_ldPath</sprite>
+      <sprite>sprites\spr_rdPath</sprite>
+      <sprite>sprites\spr_luPath</sprite>
+      <sprite>sprites\spr_ruPath</sprite>
       <sprite>sprites\spr_test</sprite>
     </sprites>
     <sprites name="Main">
@@ -149,8 +152,14 @@
   <objects name="objects">
     <objects name="User Elements">
       <object>objects\obj_path</object>
+      <object>objects\obj_ldPath</object>
+      <object>objects\obj_rdPath</object>
+      <object>objects\obj_luPath</object>
+      <object>objects\obj_ruPath</object>
+      <object>objects\obj_directionalPath</object>
     </objects>
     <objects name="Main">
+      <object>objects\obj_particleShadow</object>
       <object>objects\obj_particle</object>
       <object>objects\obj_controller</object>
     </objects>
