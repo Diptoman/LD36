@@ -30,13 +30,57 @@
 type = "-"; //Default "-", "+" has to be specified
 currentDirection = ""; //"l", "r", "u", "d"
 
-alarm[0] = 1; //Alarm0 controls movement
-
 //Create shadow
 alarm[1] = 1;
 
 //First time inits
 alarm[3] = 1;
+
+//Decide where to move next
+alarm[4] = 1;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Set 1st time Alarm0
+alarm[0] = global.alarmTiming - 1;
+
+//Choose and move to next grid
+if (currentDirection == "l")
+{
+    scr_MoveNextFirst(-1,0);
+}
+else if (currentDirection == "r")
+{
+    scr_MoveNextFirst(1,0);
+}
+else if (currentDirection == "u")
+{
+    scr_MoveNextFirst(0,-1);
+}
+else if (currentDirection == "d")
+{
+    scr_MoveNextFirst(0,1);
+}
 </string>
           </argument>
         </arguments>
@@ -59,13 +103,7 @@ alarm[3] = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Delayed inits
-if (type == "+")
-{
-    sprite_index = spr_plus;
-}
-
-//Rotation
+            <string>///Rotation
 TweenFire(id,image_angle__,EaseLinear,3,0,0,global.alarmTiming*4,0,360);
 </string>
           </argument>
@@ -144,9 +182,6 @@ shadowObj.sprite_index = sprite_index;
             <string>///Decide where to move next
 alarm[0] = global.alarmTiming;
 
-//Teleport first, if applicable
-
-
 //Choose and move to next grid
 if (currentDirection == "l")
 {
@@ -163,6 +198,36 @@ else if (currentDirection == "u")
 else if (currentDirection == "d")
 {
     scr_MoveNext(0,1);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (type == "+")
+{
+    sprite_index = spr_plus;
+}
+else
+{
+    sprite_index = spr_minus;
 }
 </string>
           </argument>
