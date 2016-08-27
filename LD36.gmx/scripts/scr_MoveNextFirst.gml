@@ -251,12 +251,12 @@ Move to next grid based on final currentDirection
 if (canMove)
 {
     if (currentDirection == "l")
-        TweenFire(id,x__,EaseLinear,0,0,0,global.alarmTiming,x,x-32);
+        TweenFire(id,x__,EaseLinear,0,0,0,global.alarmTiming-1,x,x-32);
     else if (currentDirection == "r")
-        TweenFire(id,x__,EaseLinear,0,0,0,global.alarmTiming,x,x+32);
+        TweenFire(id,x__,EaseLinear,0,0,0,global.alarmTiming-1,x,x+32);
     else if (currentDirection == "u")
-        TweenFire(id,y__,EaseLinear,0,0,0,global.alarmTiming,y,y-32);
+        TweenFire(id,y__,EaseLinear,0,0,0,global.alarmTiming-1,y,y-32);
     else if (currentDirection == "d")
-        TweenFire(id,y__,EaseLinear,0,0,0,global.alarmTiming,y,y+32);
+        TweenFire(id,y__,EaseLinear,0,0,0,global.alarmTiming-1,y,y+32);
         
 }

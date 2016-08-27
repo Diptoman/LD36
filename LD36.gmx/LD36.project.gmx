@@ -98,7 +98,7 @@
       <sprite>sprites\spr_plus</sprite>
       <sprite>sprites\spr_minus</sprite>
       <sprite>sprites\spr_portal</sprite>
-      <sprite>sprites\spr_splitter</sprite>
+      <sprite>sprites\spr_colorShifter</sprite>
       <sprite>sprites\spr_neutral</sprite>
       <sprite>sprites\spr_pluspoint</sprite>
       <sprite>sprites\spr_minuspoint</sprite>
@@ -110,6 +110,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_MoveNext.gml</script>
+    <script>scripts\scr_MoveNextFirst.gml</script>
     <scripts name="TweenGMS">
       <scripts name="Core">
         <script>scripts\Ease.gml</script>
@@ -169,6 +170,7 @@
       <object>objects\obj_ruPath</object>
       <object>objects\obj_directionalPath</object>
       <object>objects\obj_portal</object>
+      <object>objects\obj_colorShifter</object>
       <object>objects\obj_ldSplitter</object>
       <object>objects\obj_rdSplitter</object>
       <object>objects\obj_luSplitter</object>
@@ -182,6 +184,8 @@
       <object>objects\obj_particle</object>
       <object>objects\obj_neutralParticle</object>
       <object>objects\obj_controller</object>
+      <object>objects\obj_endminus</object>
+      <object>objects\obj_endplus</object>
       <object>objects\obj_end</object>
     </objects>
     <objects name="TweenGMS">
