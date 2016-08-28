@@ -8,6 +8,29 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_speed = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="6" enumb="4">
       <action>
         <libid>1</libid>
@@ -25,14 +48,44 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (obj_controller.mode == "Placement")
+            <string>//Play or Stop
+if (obj_controller.mode == "Placement")
 {
     obj_controller.mode = "Play";
-    for(i = 0;i &lt; ds_list_size(obj_controller.portalList);i++)
+    for(i = 0;i &lt; ds_list_size(obj_controller.particleList);i++)
     {
-        (ds_list_find_value(obj_controller.portalList,i)).alarm[1] = 1;
-        (ds_list_find_value(obj_controller.portalList,i)).alarm[4] = 1;
+        (ds_list_find_value(obj_controller.particleList,i)).alarm[1] = 1;
+        (ds_list_find_value(obj_controller.particleList,i)).alarm[4] = 1;
     }
+    image_index = 1;
+}
+else
+{
+    for(i = 0;i &lt; ds_list_size(obj_controller.particleList);i=i)
+    {
+        //Delete old
+        with (ds_list_find_value(obj_controller.particleList,0)) instance_destroy();
+    }
+    
+    //Reset all splitter positions
+    for(i = 0;i &lt; instance_number(obj_directionalSplitter);i++)
+    {
+        splitter = instance_find(obj_directionalSplitter,i);
+        splitter.x = splitter.placeX;
+        splitter.y = splitter.placeY;
+    }
+    
+    //Create new (reset)
+    for(i = 0;i &lt; ds_list_size(obj_controller.initParticleX);i++)
+    {
+        newPart = instance_create(ds_list_find_value(obj_controller.initParticleX,i),ds_list_find_value(obj_controller.initParticleY,i),obj_particle);
+        newPart.currentDirection = ds_list_find_value(obj_controller.initParticleDir,i);
+        newPart.type = ds_list_find_value(obj_controller.initParticleType,i);
+        newPart.isOriginal = false;
+    }
+    ds_list_clear(obj_controller.particleList);
+    obj_controller.mode = "Placement";
+    image_index = 0;
 }
 </string>
           </argument>
@@ -62,6 +115,7 @@ draw_rectangle(928, 128, 1334, 512, 0);
 draw_set_alpha(1);
 draw_set_color(c_white);
 draw_self();
+draw_text(x,y+64,string(ds_list_size(obj_controller.particleList)));
 </string>
           </argument>
         </arguments>

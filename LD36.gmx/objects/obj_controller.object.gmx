@@ -34,6 +34,12 @@ currentSelectionID = -1;
 portalList = ds_list_create();
 
 particleList = ds_list_create();
+
+//Init lists
+initParticleX = ds_list_create();
+initParticleY = ds_list_create();
+initParticleDir = ds_list_create();
+initParticleType = ds_list_create();
 </string>
           </argument>
         </arguments>
@@ -69,6 +75,18 @@ if ((mode == "Placement"))
             if (blankArea.tileType == "portal")
             {
                 ds_list_delete(portalList,ds_list_find_index(portalList,blankArea.tileID));
+            }
+            
+            //If splitter, delete underlying paths
+            if ((blankArea.tileType == "ldSplitter") 
+            || (blankArea.tileType == "rdSplitter")
+            || (blankArea.tileType == "luSplitter")
+            || (blankArea.tileType == "ruSplitter")
+            || (blankArea.tileType == "rlSplitter")
+            || (blankArea.tileType == "udSplitter"))
+            {
+                path = collision_point(blankArea.x,blankArea.y,obj_path,0,0);
+                with (path) instance_destroy();
             }
             
             blankArea.tileType = "";

@@ -95,6 +95,7 @@ if ((!decisionMade) && (canMove))
             particleObj.currentDirection = "r";
             particleObj.alarm[1] = 1;
             particleObj.alarm[4] = 1;
+            particleObj.isOriginal = false;
         }
         //Right split
         if ((splitter.direction1 == "r") || (splitter.direction2 == "r")) 
@@ -104,6 +105,7 @@ if ((!decisionMade) && (canMove))
             particleObj.currentDirection = "l";
             particleObj.alarm[1] = 1;
             particleObj.alarm[4] = 1;
+            particleObj.isOriginal = false;
         }
         //Up split
         if ((splitter.direction1 == "u") || (splitter.direction2 == "u")) 
@@ -113,6 +115,7 @@ if ((!decisionMade) && (canMove))
             particleObj.currentDirection = "d";
             particleObj.alarm[1] = 1;
             particleObj.alarm[4] = 1;
+            particleObj.isOriginal = false;
         }
         //Down split
         if ((splitter.direction1 == "d") || (splitter.direction2 == "d")) 
@@ -122,13 +125,21 @@ if ((!decisionMade) && (canMove))
             particleObj.currentDirection = "u";
             particleObj.alarm[1] = 1;
             particleObj.alarm[4] = 1;
+            particleObj.isOriginal = false;
         }
         //Stop other actions and delete this
         decisionMade = true;
         alarm[2] = 1;
-        //Change splitter to normal tile
-        instance_create(splitter.x,splitter.y,obj_path);
-        with (splitter) instance_destroy();
+        
+        //Create path if not already there
+        if (!collision_point(splitter.x,splitter.y,obj_path,0,0))
+            instance_create(splitter.x,splitter.y,obj_path);
+        
+        //Move the splitter out of view to be taken back later
+        splitter.placeX = splitter.x;
+        splitter.placeY = splitter.y;
+        splitter.x = -32;
+        splitter.y = -32;
     }
 }
 

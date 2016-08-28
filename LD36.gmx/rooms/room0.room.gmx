@@ -68,7 +68,7 @@
     <instance objName="obj_ruPath" x="192" y="416" name="inst_02A76E84" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_luPath" x="608" y="416" name="inst_0EA93764" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ldPath" x="736" y="64" name="inst_F15AA3BF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_particle" x="64" y="384" name="inst_3FC9EEA1" locked="0" code="currentDirection = &quot;u&quot;;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_particle" x="64" y="384" name="inst_3FC9EEA1" locked="0" code="currentDirection = &quot;u&quot;;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_particle" x="736" y="384" name="inst_BECA272B" locked="0" code="currentDirection = &quot;u&quot;;&#xA;type = &quot;+&quot;;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_path" x="128" y="64" name="inst_4BF12260" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_path" x="160" y="64" name="inst_045DF2A4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -206,7 +206,7 @@
     <instance objName="obj_endplus" x="640" y="608" name="inst_815ECEBC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rdPath_UI" x="1152" y="192" name="inst_98F8ECDD" locked="0" code="num = 3;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ruSplitter_UI" x="1088" y="256" name="inst_667031C8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rdPath" x="64" y="64" name="inst_26046517" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rdSplitter" x="64" y="64" name="inst_1ACDFC3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
