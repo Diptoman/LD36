@@ -224,6 +224,7 @@
       </objects>
       <object>objects\obj_play</object>
       <object>objects\obj_restart</object>
+      <object>objects\obj_UIBox</object>
     </objects>
     <objects name="Extras">
       <object>objects\obj_decorProducer</object>
@@ -234,8 +235,8 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_levelselect</room>
     <room>rooms\room0</room>
+    <room>rooms\rm_levelselect</room>
     <room>rooms\room1</room>
   </rooms>
   <help>

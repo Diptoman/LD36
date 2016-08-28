@@ -109,13 +109,8 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_alpha(.3);
-draw_set_color(c_yellow);
-draw_rectangle(928, 128, 1334, 512, 0);
-draw_set_alpha(1);
-draw_set_color(c_white);
+            <string>draw_set_color(c_white);
 draw_self();
-draw_text(x,y+64,string(ds_list_size(obj_controller.particleList)));
 </string>
           </argument>
         </arguments>
