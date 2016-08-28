@@ -218,6 +218,7 @@
         <object>objects\obj_blankArea</object>
       </objects>
       <object>objects\obj_play</object>
+      <object>objects\obj_restart</object>
     </objects>
   </objects>
   <rooms name="rooms">

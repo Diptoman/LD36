@@ -113,7 +113,6 @@
     <instance objName="obj_path" x="320" y="192" name="inst_A9E7162D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_path" x="352" y="192" name="inst_4594633F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_path" x="384" y="192" name="inst_9F09FD96" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_path" x="384" y="192" name="inst_C613EB9E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_path" x="416" y="192" name="inst_FF8508A2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_path" x="448" y="192" name="inst_C9C1B3AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_path" x="480" y="192" name="inst_C17D2E05" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -195,7 +194,7 @@
     <instance objName="obj_blankArea" x="608" y="704" name="inst_9B380387" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_blankArea" x="192" y="64" name="inst_AE038B85" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_blankArea" x="192" y="192" name="inst_8D519061" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_play" x="1120" y="416" name="inst_5C866BCD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_play" x="1088" y="416" name="inst_5C866BCD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_blankArea" x="640" y="704" name="inst_05F1454D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_blankArea" x="672" y="704" name="inst_D06EC6F7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_blankArea" x="512" y="192" name="inst_B320E162" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -207,6 +206,7 @@
     <instance objName="obj_rdPath_UI" x="1152" y="192" name="inst_98F8ECDD" locked="0" code="num = 3;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ruSplitter_UI" x="1088" y="256" name="inst_667031C8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rdSplitter" x="64" y="64" name="inst_1ACDFC3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_restart" x="1216" y="416" name="inst_658E7269" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
