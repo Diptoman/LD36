@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>direction1 = "l";
 direction2 = "d";
+placeX = x;
+placeY = y;
 </string>
           </argument>
         </arguments>

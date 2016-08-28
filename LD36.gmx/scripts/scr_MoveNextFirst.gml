@@ -93,6 +93,9 @@ if ((!decisionMade) && (canMove))
             particleObj = instance_create(x,y,obj_particle);
             particleObj.type = type;
             particleObj.currentDirection = "r";
+            particleObj.alarm[1] = 1;
+            particleObj.alarm[4] = 1;
+            particleObj.isOriginal = false;
         }
         //Right split
         if ((splitter.direction1 == "r") || (splitter.direction2 == "r")) 
@@ -100,6 +103,9 @@ if ((!decisionMade) && (canMove))
             particleObj = instance_create(x,y,obj_particle);
             particleObj.type = type;
             particleObj.currentDirection = "l";
+            particleObj.alarm[1] = 1;
+            particleObj.alarm[4] = 1;
+            particleObj.isOriginal = false;
         }
         //Up split
         if ((splitter.direction1 == "u") || (splitter.direction2 == "u")) 
@@ -107,6 +113,9 @@ if ((!decisionMade) && (canMove))
             particleObj = instance_create(x,y,obj_particle);
             particleObj.type = type;
             particleObj.currentDirection = "d";
+            particleObj.alarm[1] = 1;
+            particleObj.alarm[4] = 1;
+            particleObj.isOriginal = false;
         }
         //Down split
         if ((splitter.direction1 == "d") || (splitter.direction2 == "d")) 
@@ -114,6 +123,9 @@ if ((!decisionMade) && (canMove))
             particleObj = instance_create(x,y,obj_particle);
             particleObj.type = type;
             particleObj.currentDirection = "u";
+            particleObj.alarm[1] = 1;
+            particleObj.alarm[4] = 1;
+            particleObj.isOriginal = false;
         }
         //Stop other actions and delete this
         decisionMade = true;
@@ -284,7 +296,7 @@ if (collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_path,0,1)
     || collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_portal,0,1)
     || collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_end,0,1)
     || collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_colorShifter,0,1)
-    || collision_point(x,y,obj_portal,0,1))
+    || collision_point(x,y,obj_end,0,1))
 {
     
 }
