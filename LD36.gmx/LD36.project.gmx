@@ -111,6 +111,9 @@
     <sprites name="UI">
       <sprite>sprites\spr_play</sprite>
     </sprites>
+    <sprites name="Bg">
+      <sprite>sprites\spr_decor</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -219,6 +222,10 @@
       </objects>
       <object>objects\obj_play</object>
       <object>objects\obj_restart</object>
+    </objects>
+    <objects name="Extras">
+      <object>objects\obj_decorProducer</object>
+      <object>objects\obj_decor</object>
     </objects>
   </objects>
   <rooms name="rooms">

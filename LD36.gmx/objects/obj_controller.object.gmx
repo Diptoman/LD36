@@ -40,6 +40,8 @@ initParticleX = ds_list_create();
 initParticleY = ds_list_create();
 initParticleDir = ds_list_create();
 initParticleType = ds_list_create();
+
+instance_create(x,y,obj_decorProducer);
 </string>
           </argument>
         </arguments>
