@@ -196,6 +196,21 @@
     <instance objName="obj_path" x="768" y="704" name="inst_7FC69AAD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_endplus" x="800" y="704" name="inst_D3440F62" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_colorShifter" x="672" y="704" name="inst_9D9F62E4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_path_UI" x="1024" y="192" name="inst_B6E60BDA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ldPath_UI" x="1088" y="192" name="inst_B108F360" locked="0" code="num = 3;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_portal_UI" x="1216" y="192" name="inst_D2D0E50A" locked="0" code="typeNum = 1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ruSplitter_UI" x="1088" y="256" name="inst_BF37D951" locked="0" code="num = 2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_portal_UI" x="1024" y="256" name="inst_6846AACB" locked="0" code="typeNum = 2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_luPath_UI" x="1152" y="192" name="inst_EA9A4EBC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_colorShifter_UI" x="1152" y="256" name="inst_FFEF53B1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blankArea" x="608" y="576" name="inst_E1DCD482" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blankArea" x="96" y="576" name="inst_4FD10E71" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blankArea" x="128" y="576" name="inst_71378192" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blankArea" x="160" y="576" name="inst_FA2F827A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blankArea" x="192" y="576" name="inst_217C3EEB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blankArea" x="64" y="640" name="inst_9B380387" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blankArea" x="96" y="640" name="inst_AE038B85" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blankArea" x="128" y="640" name="inst_8D519061" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

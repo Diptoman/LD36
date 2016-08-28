@@ -26,6 +26,187 @@
           <argument>
             <kind>1</kind>
             <string>global.alarmTiming = 5; //Higher number = Less play speed
+
+mode = "Placement"; //Placement or Play
+currentSelection = ""; //In Placement mode, what is currently selected
+currentSelectionID = -1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="50">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Selection mode placement
+if ((mode == "Placement") &amp;&amp; (currentSelection != ""))
+{
+    if ((mouse_x &lt; 928) //Mouse to the left
+    &amp;&amp; (currentSelectionID.num &gt; 0) //Spare tiles available
+    &amp;&amp; (collision_point(floor((mouse_x+16)/32)*32, floor((mouse_y+16)/32)*32,obj_blankArea,0,0))) //Mouse is over blank space
+    {
+        toCreateObject = -1;
+        switch(currentSelection)
+        {
+            case "path":
+                toCreateObject = obj_path;
+                break;
+            case "ldPath":
+                toCreateObject = obj_ldPath;
+                break;
+            case "rdPath":
+                toCreateObject = obj_rdPath;
+                break;
+            case "ruPath":
+                toCreateObject = obj_ruPath;
+                break;
+            case "luPath":
+                toCreateObject = obj_luPath;
+                break;
+            case "rdSplitter":
+                toCreateObject = obj_rdSplitter;
+                break;
+            case "ldSplitter":
+                toCreateObject = obj_ldSplitter;
+                break;
+            case "ruSplitter":
+                toCreateObject = obj_ruSplitter;
+                break;
+            case "luSplitter":
+                toCreateObject = obj_luSplitter;
+                break;
+            case "rlSplitter":
+                toCreateObject = obj_rlSplitter;
+                break;
+            case "udSplitter":
+                toCreateObject = obj_udSplitter;
+                break;
+            case "colorShifter":
+                toCreateObject = obj_colorShifter;
+                break;
+            case "portal":
+                toCreateObject = obj_portal;
+                break;
+        }
+        
+        if (toCreateObject!=-1)
+        {
+            blankArea = collision_point(floor((mouse_x+16)/32)*32, floor((mouse_y+16)/32)*32,obj_blankArea,0,0);
+            if (!blankArea.isFilled)
+            {
+                tile = instance_create(floor((mouse_x+16)/32)*32, floor((mouse_y+16)/32)*32,toCreateObject);
+                
+                //Decrease number
+                currentSelectionID.num -= 1;
+                
+                //Portal type
+                if (currentSelection == "portal")
+                    tile.type = toDrawSubImage + 1;
+                
+                blankArea.isFilled = 1;
+            }
+            
+            //Change the area
+        }
+        
+        //show_message("LOL");
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Selection Mode Draw
+if (mode == "Placement")
+{
+    toDrawSprite = -1;
+    toDrawSubImage = 0;
+    if (mouse_x &lt; 928)
+    {
+        switch(currentSelection)
+        {
+            case "path":
+                toDrawSprite = spr_path;
+                break;
+            case "ldPath":
+                toDrawSprite = spr_ldPath;
+                break;
+            case "rdPath":
+                toDrawSprite = spr_rdPath;
+                break;
+            case "ruPath":
+                toDrawSprite = spr_ruPath;
+                break;
+            case "luPath":
+                toDrawSprite = spr_luPath;
+                break;
+            case "rdSplitter":
+                toDrawSprite = spr_rdSplitter;
+                break;
+            case "ldSplitter":
+                toDrawSprite = spr_ldSplitter;
+                break;
+            case "ruSplitter":
+                toDrawSprite = spr_ruSplitter;
+                break;
+            case "luSplitter":
+                toDrawSprite = spr_luSplitter;
+                break;
+            case "rlSplitter":
+                toDrawSprite = spr_rlSplitter;
+                break;
+            case "udSplitter":
+                toDrawSprite = spr_udSplitter;
+                break;
+            case "colorShifter":
+                toDrawSprite = spr_colorShifter;
+                break;
+            case "portal":
+                toDrawSprite = spr_portalUI; 
+                toDrawSubImage = portalSub;
+                break;
+        }
+        
+        if (toDrawSprite!=-1)
+        {
+            draw_sprite(toDrawSprite,toDrawSubImage,floor((mouse_x+16)/32)*32, floor((mouse_y+16)/32)*32);
+        }
+        
+        //show_message("LOL");
+    }
+}
 </string>
           </argument>
         </arguments>
