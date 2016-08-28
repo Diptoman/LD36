@@ -32,6 +32,8 @@ currentSelection = ""; //In Placement mode, what is currently selected
 currentSelectionID = -1;
 
 portalList = ds_list_create();
+
+particleList = ds_list_create();
 </string>
           </argument>
         </arguments>
@@ -172,7 +174,6 @@ if ((mode == "Placement") &amp;&amp; (currentSelection != ""))
                 if (currentSelection == "portal")
                 {
                     tile.type = portalSub + 1;
-                    ds_list_add(portalList,tile);
                     
                     //Find destination, add set them
                     for(i=0;i&lt;ds_list_size(portalList);i++)
@@ -183,6 +184,8 @@ if ((mode == "Placement") &amp;&amp; (currentSelection != ""))
                             tile.destinationID =  (ds_list_find_value(portalList,i)).id;
                         }
                     }
+                    
+                    ds_list_add(portalList,tile);
                 }
                 
                 blankArea.isFilled = 1;

@@ -283,6 +283,7 @@
     <instance objName="obj_path" x="928" y="288" name="inst_A8D7E062" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_path" x="928" y="352" name="inst_CBFE3BA0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_colorShifter" x="928" y="320" name="inst_9D9F62E4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_play" x="1184" y="640" name="inst_0BD07257" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

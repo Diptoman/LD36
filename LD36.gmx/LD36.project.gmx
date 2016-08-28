@@ -108,6 +108,9 @@
       <sprite>sprites\spr_minuspoint</sprite>
       <sprite>sprites\spr_blankArea</sprite>
     </sprites>
+    <sprites name="UI">
+      <sprite>sprites\spr_play</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -214,6 +217,7 @@
         <object>objects\obj_colorShifter_UI</object>
         <object>objects\obj_blankArea</object>
       </objects>
+      <object>objects\obj_play</object>
     </objects>
   </objects>
   <rooms name="rooms">
