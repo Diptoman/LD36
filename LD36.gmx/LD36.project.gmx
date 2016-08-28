@@ -105,7 +105,9 @@
       <sprite>sprites\spr_colorShifter</sprite>
       <sprite>sprites\spr_neutral</sprite>
       <sprite>sprites\spr_pluspoint</sprite>
+      <sprite>sprites\spr_plusPointPulse</sprite>
       <sprite>sprites\spr_minuspoint</sprite>
+      <sprite>sprites\spr_minusPointPulse</sprite>
       <sprite>sprites\spr_blankArea</sprite>
     </sprites>
     <sprites name="UI">
