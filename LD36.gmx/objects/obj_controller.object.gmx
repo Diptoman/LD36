@@ -30,6 +30,56 @@
 mode = "Placement"; //Placement or Play
 currentSelection = ""; //In Placement mode, what is currently selected
 currentSelectionID = -1;
+
+portalList = ds_list_create();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="51">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Selection mode placement
+if ((mode == "Placement"))
+{
+    blankArea = collision_point(floor((mouse_x+16)/32)*32, floor((mouse_y+16)/32)*32,obj_blankArea,0,0);
+    if ((mouse_x &lt; 928) //Mouse to the left
+    &amp;&amp; (blankArea)) //Mouse is over blank space
+    {
+        if (blankArea.isFilled)
+        {
+            //If portal
+            if (blankArea.tileType == "portal")
+            {
+                ds_list_delete(portalList,ds_list_find_index(portalList,blankArea.tileID));
+            }
+            
+            blankArea.tileType = "";
+            blankArea.isFilled = false;
+            (blankArea.selectionID).num += 1;
+            blankArea.selectionID = -1;
+        
+            with (blankArea.tileID) instance_destroy();
+            blankArea.tileID = -1;
+        }
+        
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -109,13 +159,31 @@ if ((mode == "Placement") &amp;&amp; (currentSelection != ""))
             if (!blankArea.isFilled)
             {
                 tile = instance_create(floor((mouse_x+16)/32)*32, floor((mouse_y+16)/32)*32,toCreateObject);
+                blankArea.tileID = tile;
+                blankArea.tileType = currentSelection;
+                
+                //Add info about current selection ID
+                blankArea.selectionID = currentSelectionID;
                 
                 //Decrease number
                 currentSelectionID.num -= 1;
                 
                 //Portal type
                 if (currentSelection == "portal")
-                    tile.type = toDrawSubImage + 1;
+                {
+                    tile.type = portalSub + 1;
+                    ds_list_add(portalList,tile);
+                    
+                    //Find destination, add set them
+                    for(i=0;i&lt;ds_list_size(portalList);i++)
+                    {
+                        if (ds_list_find_value(portalList,i).type == (portalSub + 1))
+                        {
+                            (ds_list_find_value(portalList,i)).destinationID = tile.id;
+                            tile.destinationID =  (ds_list_find_value(portalList,i)).id;
+                        }
+                    }
+                }
                 
                 blankArea.isFilled = 1;
             }
