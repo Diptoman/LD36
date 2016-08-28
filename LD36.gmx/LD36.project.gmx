@@ -113,6 +113,7 @@
     </sprites>
     <sprites name="Bg">
       <sprite>sprites\spr_decor</sprite>
+      <sprite>sprites\spr_triangle</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -227,8 +228,12 @@
       <object>objects\obj_decorProducer</object>
       <object>objects\obj_decor</object>
     </objects>
+    <objects name="LevelSelect">
+      <object>objects\obj_lvlController</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_levelselect</room>
     <room>rooms\room0</room>
     <room>rooms\room1</room>
   </rooms>
