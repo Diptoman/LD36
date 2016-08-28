@@ -97,18 +97,16 @@
     <sprites name="Main">
       <sprite>sprites\spr_plus</sprite>
       <sprite>sprites\spr_plusTop</sprite>
-      <sprite>sprites\spr_minus</sprite>
       <sprite>sprites\spr_minusTop</sprite>
+      <sprite>sprites\spr_minus</sprite>
       <sprite>sprites\spr_portal</sprite>
-      <sprite>sprites\spr_portal1</sprite>
-      <sprite>sprites\spr_portal2</sprite>
-      <sprite>sprites\spr_portal3</sprite>
-      <sprite>sprites\spr_portal4</sprite>
+      <sprite>sprites\spr_portalBase</sprite>
+      <sprite>sprites\spr_portalUI</sprite>
       <sprite>sprites\spr_colorShifter</sprite>
       <sprite>sprites\spr_neutral</sprite>
       <sprite>sprites\spr_pluspoint</sprite>
       <sprite>sprites\spr_minuspoint</sprite>
-      <sprite>sprites\spr_minusPointTop</sprite>
+      <sprite>sprites\spr_blankArea</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -187,10 +185,10 @@
       <object>objects\obj_directionalSplitter</object>
     </objects>
     <objects name="Main">
+      <object>objects\obj_controller</object>
       <object>objects\obj_particleShadow</object>
       <object>objects\obj_particle</object>
       <object>objects\obj_neutralParticle</object>
-      <object>objects\obj_controller</object>
       <object>objects\obj_endminus</object>
       <object>objects\obj_endplus</object>
       <object>objects\obj_end</object>
@@ -198,9 +196,29 @@
     <objects name="TweenGMS">
       <object>objects\obj_SharedTweener</object>
     </objects>
+    <objects name="UI">
+      <object>objects\obj_tileParent</object>
+      <objects name="Tiles">
+        <object>objects\obj_path_UI</object>
+        <object>objects\obj_ldPath_UI</object>
+        <object>objects\obj_rdPath_UI</object>
+        <object>objects\obj_luPath_UI</object>
+        <object>objects\obj_ruPath_UI</object>
+        <object>objects\obj_ldSplitter_UI</object>
+        <object>objects\obj_rdSplitter_UI</object>
+        <object>objects\obj_luSplitter_UI</object>
+        <object>objects\obj_ruSplitter_UI</object>
+        <object>objects\obj_rlSplitter_UI</object>
+        <object>objects\obj_udSplitter_UI</object>
+        <object>objects\obj_portal_UI</object>
+        <object>objects\obj_colorShifter_UI</object>
+        <object>objects\obj_blankArea</object>
+      </objects>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
+    <room>rooms\room1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
