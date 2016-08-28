@@ -110,6 +110,7 @@
     </sprites>
     <sprites name="UI">
       <sprite>sprites\spr_play</sprite>
+      <sprite>sprites\spr_uiBox</sprite>
     </sprites>
     <sprites name="Bg">
       <sprite>sprites\spr_decor</sprite>
