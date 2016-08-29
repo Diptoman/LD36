@@ -53,7 +53,7 @@
   <instances>
     <instance objName="obj_controller" x="0" y="0" name="inst_D420E2AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_particle" x="320" y="512" name="inst_9DF52AE0" locked="0" code="currentDirection = &quot;l&quot;;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_particle" x="480" y="512" name="inst_174B2ADC" locked="0" code="currentDirection = &quot;r&quot;;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_particle" x="416" y="224" name="inst_174B2ADC" locked="0" code="currentDirection = &quot;d&quot;;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_path" x="256" y="512" name="inst_1B4D19C2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_path" x="288" y="512" name="inst_A03F817E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_path" x="320" y="512" name="inst_12D78588" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -63,7 +63,7 @@
     <instance objName="obj_path" x="640" y="512" name="inst_2FC28D9B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_path" x="544" y="512" name="inst_D60D4DCF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_path" x="576" y="512" name="inst_7889CE12" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_path" x="480" y="512" name="inst_7569FF9F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_path" x="416" y="512" name="inst_7569FF9F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_path" x="512" y="512" name="inst_39DD1382" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_path_UI" x="1088" y="192" name="inst_B6E60BDA" locked="0" code="num = 3;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ldPath_UI" x="1152" y="192" name="inst_B108F360" locked="0" code="num = 3;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -88,6 +88,22 @@
     <instance objName="obj_path" x="736" y="288" name="inst_EDDAFCB1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_path" x="736" y="256" name="inst_1374DE2E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_luPath" x="736" y="352" name="inst_75E058AD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_path" x="416" y="224" name="inst_D6896129" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_path" x="416" y="256" name="inst_1BC7F37D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_path" x="416" y="352" name="inst_92C9D473" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_path" x="416" y="320" name="inst_1FC8986F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_path" x="416" y="288" name="inst_6D06C064" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_path" x="384" y="384" name="inst_C6995768" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_path" x="352" y="384" name="inst_A72C1789" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_path" x="320" y="384" name="inst_40A9D991" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_path" x="288" y="384" name="inst_B645F9A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_path" x="256" y="384" name="inst_B4CDC408" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rlSplitter" x="416" y="384" name="inst_23CE7143" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_path" x="480" y="384" name="inst_8C1B6111" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_path" x="512" y="384" name="inst_10B344D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_path" x="544" y="384" name="inst_DE3066D2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_path" x="576" y="384" name="inst_FCA399FD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_path" x="608" y="384" name="inst_70F136CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

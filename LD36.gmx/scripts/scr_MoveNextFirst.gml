@@ -113,18 +113,27 @@ if ((!decisionMade) && (canMove) && (checkForCollisions))
         //If same sign
         if (otherParticle.type == type)
         {
-            //Move in reverse
-            if (xDirectionSign != 0) //If left or right
+            //If same direction (bugged), delete one
+            if (otherParticle.currentDirection == currentDirection)
             {
-                //Change currentDirection
-                if (currentDirection == "l") currentDirection = "r";
-                else if (currentDirection == "r") currentDirection = "l";
+                instance_destroy();
+                canMove = false;
+                decisionMade = true;
             }
-            else //If up or down
-            {
-                //Change currentDirection
-                if (currentDirection == "d") currentDirection = "u";
-                else if (currentDirection == "u") currentDirection = "d";
+            else
+            {   //Move in reverse
+                if (xDirectionSign != 0) //If left or right
+                {
+                    //Change currentDirection
+                    if (currentDirection == "l") currentDirection = "r";
+                    else if (currentDirection == "r") currentDirection = "l";
+                }
+                else //If up or down
+                {
+                    //Change currentDirection
+                    if (currentDirection == "d") currentDirection = "u";
+                    else if (currentDirection == "u") currentDirection = "d";
+                }
             }
         }
         else //If opposite sign
