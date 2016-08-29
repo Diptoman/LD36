@@ -364,6 +364,8 @@ if ((!decisionMade) && (canMove))
             particleObj.alarm[1] = 1;
             particleObj.alarm[4] = 1;
             particleObj.isOriginal = false;
+            particleObj.checkForCollisions = false;
+            particleObj.alarm[9] = 2;
         }
         //Right split
         if ((splitter.direction1 == "r") || (splitter.direction2 == "r")) 
@@ -374,6 +376,8 @@ if ((!decisionMade) && (canMove))
             particleObj.alarm[1] = 1;
             particleObj.alarm[4] = 1;
             particleObj.isOriginal = false;
+            particleObj.checkForCollisions = false;
+            particleObj.alarm[9] = 2;
         }
         //Up split
         if ((splitter.direction1 == "u") || (splitter.direction2 == "u")) 
@@ -384,6 +388,8 @@ if ((!decisionMade) && (canMove))
             particleObj.alarm[1] = 1;
             particleObj.alarm[4] = 1;
             particleObj.isOriginal = false;
+            particleObj.checkForCollisions = false;
+            particleObj.alarm[9] = 2;
         }
         //Down split
         if ((splitter.direction1 == "d") || (splitter.direction2 == "d")) 
@@ -394,6 +400,8 @@ if ((!decisionMade) && (canMove))
             particleObj.alarm[1] = 1;
             particleObj.alarm[4] = 1;
             particleObj.isOriginal = false;
+            particleObj.checkForCollisions = false;
+            particleObj.alarm[9] = 2;
         }
         //Stop other actions and delete this
         decisionMade = true;
