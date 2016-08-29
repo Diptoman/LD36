@@ -82,7 +82,10 @@ if (global.currentLevel &gt;= global.level)
 global.currentLevel += 1;
 
 //Go to next room
-room_goto_next();
+if (room == rm_lvl4) || (room == rm_lvl8) || (room == rm_lvl12)
+    room_goto(rm_levelselect1);
+else
+    room_goto_next();
 
 
 </string>
