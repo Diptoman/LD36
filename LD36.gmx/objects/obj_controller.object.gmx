@@ -314,7 +314,7 @@ if (mode == "Placement")
 {
     toDrawSprite = -1;
     toDrawSubImage = 0;
-    if (mouse_x &lt; 928)
+    if (mouse_x &lt; 960)
     {
         switch(currentSelection)
         {
