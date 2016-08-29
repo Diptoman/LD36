@@ -13,6 +13,11 @@ if (endPoint)
     {
         canMove = false;
         decisionMade = true;
+        if (!endPoint.isFinished)
+        {
+            endPoint.isFinished = true;
+            obj_controller.endPointReaches += 1;
+        }
     }
 }
 
@@ -130,9 +135,16 @@ if ((!decisionMade) && (canMove))
         //Stop other actions and delete this
         decisionMade = true;
         alarm[2] = 1;
-        //Change splitter to normal tile
-        instance_create(splitter.x,splitter.y,obj_path);
-        with (splitter) instance_destroy();
+        
+        //Create path if not already there
+        if (!collision_point(splitter.x,splitter.y,obj_path,0,0))
+            instance_create(splitter.x,splitter.y,obj_path);
+        
+        //Move the splitter out of view to be taken back later
+        splitter.placeX = splitter.x;
+        splitter.placeY = splitter.y;
+        splitter.x = -32;
+        splitter.y = -32;
     }
 }
 

@@ -78,7 +78,9 @@
   <NewExtensions>
     <extension index="0">extensions\TweenGMS</extension>
   </NewExtensions>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_bg</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="User Elements">
       <sprite>sprites\spr_path</sprite>
@@ -206,6 +208,7 @@
       <object>objects\obj_endplus</object>
       <object>objects\obj_end</object>
       <object>objects\obj_starter</object>
+      <object>objects\obj_endPointPulse</object>
     </objects>
     <objects name="TweenGMS">
       <object>objects\obj_SharedTweener</object>

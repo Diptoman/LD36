@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>//global.level = 6; //Default 1
+audio_play_sound(snd_bg,10,1);
 </string>
           </argument>
         </arguments>
