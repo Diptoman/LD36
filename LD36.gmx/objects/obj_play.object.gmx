@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>image_speed = 0;
+x -= 48;
+instance_create(x+224,y,obj_speedControl);
 </string>
           </argument>
         </arguments>
@@ -49,6 +51,7 @@
           <argument>
             <kind>1</kind>
             <string>//Play or Stop
+event_inherited();
 if (obj_controller.mode == "Placement")
 {
     obj_controller.mode = "Play";

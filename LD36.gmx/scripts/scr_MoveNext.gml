@@ -131,6 +131,7 @@ if ((!decisionMade) && (canMove) && (checkForCollisions))
         {
             instance_create(x,y,obj_neutralParticle);
             alarm[2] = 1; //Destroy this
+            canMove = false;
         }
     
     }
@@ -249,6 +250,7 @@ if ((!decisionMade) && (canMove))
         else //If opposite sign
         {
             instance_create(x,y,obj_neutralParticle);
+            canMove = false;
             alarm[2] = 1; //Destroy this
         }
     }
@@ -364,7 +366,7 @@ if ((!decisionMade) && (canMove))
         {
             particleObj = instance_create(x,y,obj_particle);
             particleObj.type = type;
-            particleObj.currentDirection = "r";
+            particleObj.currentDirection = "l";
             particleObj.alarm[1] = 1;
             particleObj.alarm[4] = 1;
             particleObj.isOriginal = false;
@@ -376,7 +378,7 @@ if ((!decisionMade) && (canMove))
         {
             particleObj = instance_create(x,y,obj_particle);
             particleObj.type = type;
-            particleObj.currentDirection = "l";
+            particleObj.currentDirection = "r";
             particleObj.alarm[1] = 1;
             particleObj.alarm[4] = 1;
             particleObj.isOriginal = false;
@@ -388,7 +390,7 @@ if ((!decisionMade) && (canMove))
         {
             particleObj = instance_create(x,y,obj_particle);
             particleObj.type = type;
-            particleObj.currentDirection = "d";
+            particleObj.currentDirection = "u";
             particleObj.alarm[1] = 1;
             particleObj.alarm[4] = 1;
             particleObj.isOriginal = false;
@@ -400,7 +402,7 @@ if ((!decisionMade) && (canMove))
         {
             particleObj = instance_create(x,y,obj_particle);
             particleObj.type = type;
-            particleObj.currentDirection = "u";
+            particleObj.currentDirection = "d";
             particleObj.alarm[1] = 1;
             particleObj.alarm[4] = 1;
             particleObj.isOriginal = false;
@@ -430,7 +432,8 @@ if (collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_path,0,1)
     || collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_portal,0,1)
     || collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_end,0,1)
     || collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_colorShifter,0,1)
-    || collision_point(x,y,obj_end,0,1))
+    || collision_point(x,y,obj_end,0,1)
+    || (!canMove))
 {
     
 }

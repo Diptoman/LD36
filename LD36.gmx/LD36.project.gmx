@@ -77,13 +77,19 @@
   </datafiles>
   <NewExtensions>
     <extension index="0">extensions\TweenGMS</extension>
+    <extension index="1">extensions\Draw Text Outlined</extension>
   </NewExtensions>
   <sounds name="sound">
     <sound>sound\snd_bg</sound>
+    <sound>sound\snd_finish</sound>
+    <sound>sound\snd_click</sound>
+    <sound>sound\snd_click2</sound>
+    <sound>sound\snd_click3</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="User Elements">
       <sprite>sprites\spr_path</sprite>
+      <sprite>sprites\spr_redBlank</sprite>
       <sprite>sprites\spr_ldPath</sprite>
       <sprite>sprites\spr_rdPath</sprite>
       <sprite>sprites\spr_luPath</sprite>
@@ -122,6 +128,7 @@
       <sprite>sprites\spr_play</sprite>
       <sprite>sprites\spr_uiBox</sprite>
       <sprite>sprites\spr_numberCircle</sprite>
+      <sprite>sprites\spr_emptyButton</sprite>
     </sprites>
     <sprites name="Bg">
       <sprite>sprites\spr_pyramid</sprite>
@@ -191,7 +198,14 @@
         <script>scripts\Deprecated_TweenDefaults.gml</script>
       </scripts>
     </scripts>
+    <script>scripts\draw_text_outline.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_main</font>
+    <font>fonts\fnt_icon</font>
+    <font>fonts\fnt_speed</font>
+    <font>fonts\fnt_header</font>
+  </fonts>
   <objects name="objects">
     <objects name="User Elements">
       <object>objects\obj_path</object>
@@ -249,6 +263,7 @@
       </objects>
       <object>objects\obj_play</object>
       <object>objects\obj_restart</object>
+      <object>objects\obj_speedControl</object>
       <object>objects\obj_UIBox</object>
       <object>objects\obj_text</object>
     </objects>
@@ -281,10 +296,11 @@
     <room>rooms\rm_lvl12</room>
     <room>rooms\rm_lvl13</room>
     <room>rooms\rm_lvl14</room>
+    <room>rooms\rm_lvl15</room>
     <room>rooms\rm_endgame</room>
-    <room>rooms\room9</room>
-    <room>rooms\room10</room>
     <room>rooms\room1</room>
+    <room>rooms\room10</room>
+    <room>rooms\room9</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
