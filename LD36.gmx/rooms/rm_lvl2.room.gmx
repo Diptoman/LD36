@@ -53,7 +53,6 @@
   <instances>
     <instance objName="obj_particle" x="128" y="320" name="inst_9DF52AE0" locked="0" code="currentDirection = &quot;u&quot;;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_particle" x="864" y="576" name="inst_174B2ADC" locked="0" code="currentDirection = &quot;l&quot;;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_path_UI" x="1056" y="224" name="inst_B6E60BDA" locked="0" code="num = 5;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_play" x="1088" y="544" name="inst_5C866BCD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_restart" x="1216" y="544" name="inst_658E7269" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_UIBox" x="992" y="160" name="inst_DAA7FB90" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -120,9 +119,8 @@
     <instance objName="obj_path" x="800" y="576" name="inst_3C2304FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_blankArea" x="480" y="320" name="inst_FAF281E9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_blankArea" x="480" y="576" name="inst_28A9467C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_luPath_UI" x="1120" y="224" name="inst_BAA400E5" locked="0" code="num = 1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ruPath_UI" x="1184" y="224" name="inst_C8469FD8" locked="0" code="num = 1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rdPath_UI" x="1248" y="224" name="inst_9EBCEFCD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_luPath_UI" x="1056" y="224" name="inst_BAA400E5" locked="0" code="num = 1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ruPath_UI" x="1120" y="224" name="inst_C8469FD8" locked="0" code="num = 1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_controller" x="0" y="288" name="inst_044A9669" locked="0" code="endPoints = 1;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_path" x="448" y="160" name="inst_C367EFF4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_path" x="480" y="160" name="inst_A0CE950A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
