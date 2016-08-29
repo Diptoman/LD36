@@ -181,9 +181,9 @@
     <instance objName="obj_endminus" x="288" y="704" name="inst_F8DD0D59" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_path" x="288" y="672" name="inst_293FA38C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_path" x="512" y="672" name="inst_6B4CE90B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_portal" x="288" y="320" name="inst_228D3FDE" locked="0" code="destinationID = inst_69D76A45;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_portal" x="288" y="320" name="inst_228D3FDE" locked="0" code="destinationID = inst_69D76A45;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_portal" x="288" y="640" name="inst_69D76A45" locked="0" code="destinationID = inst_228D3FDE;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_portal" x="512" y="320" name="inst_ABE31323" locked="0" code="destinationID = inst_A609A679;&#xA;type = 2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_portal" x="512" y="320" name="inst_ABE31323" locked="0" code="destinationID = inst_A609A679;&#xA;type = 2;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_portal" x="512" y="640" name="inst_A609A679" locked="0" code="destinationID = inst_ABE31323;&#xA;type = 2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ruPath" x="512" y="704" name="inst_E299DB95" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_path" x="544" y="704" name="inst_56C5AE03" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
