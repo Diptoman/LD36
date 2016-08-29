@@ -132,10 +132,12 @@ typeNum = -1;
           <argument>
             <kind>1</kind>
             <string>draw_self();
+draw_sprite_ext(spr_numberCircle,0,x+16,y-16,image_xscale,image_yscale,0,c_white,1);
 draw_set_halign(fa_center);
 draw_set_valign(fa_center);
 draw_set_color(c_white);
-draw_text(x,y-24,string(num));
+draw_set_font(fnt_icon);
+draw_text_transformed(x+16,y-16,string(num),image_xscale,image_yscale,0);
 </string>
           </argument>
         </arguments>

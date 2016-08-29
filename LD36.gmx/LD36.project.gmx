@@ -122,6 +122,7 @@
       <sprite>sprites\spr_play</sprite>
       <sprite>sprites\spr_uiBox</sprite>
       <sprite>sprites\spr_numberCircle</sprite>
+      <sprite>sprites\spr_emptyButton</sprite>
     </sprites>
     <sprites name="Bg">
       <sprite>sprites\spr_pyramid</sprite>
@@ -192,6 +193,10 @@
       </scripts>
     </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_main</font>
+    <font>fonts\fnt_icon</font>
+  </fonts>
   <objects name="objects">
     <objects name="User Elements">
       <object>objects\obj_path</object>
