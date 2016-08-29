@@ -364,7 +364,7 @@ if ((!decisionMade) && (canMove))
         {
             particleObj = instance_create(x,y,obj_particle);
             particleObj.type = type;
-            particleObj.currentDirection = "r";
+            particleObj.currentDirection = "l";
             particleObj.alarm[1] = 1;
             particleObj.alarm[4] = 1;
             particleObj.isOriginal = false;
@@ -376,7 +376,7 @@ if ((!decisionMade) && (canMove))
         {
             particleObj = instance_create(x,y,obj_particle);
             particleObj.type = type;
-            particleObj.currentDirection = "l";
+            particleObj.currentDirection = "r";
             particleObj.alarm[1] = 1;
             particleObj.alarm[4] = 1;
             particleObj.isOriginal = false;
@@ -388,7 +388,7 @@ if ((!decisionMade) && (canMove))
         {
             particleObj = instance_create(x,y,obj_particle);
             particleObj.type = type;
-            particleObj.currentDirection = "d";
+            particleObj.currentDirection = "u";
             particleObj.alarm[1] = 1;
             particleObj.alarm[4] = 1;
             particleObj.isOriginal = false;
@@ -400,7 +400,7 @@ if ((!decisionMade) && (canMove))
         {
             particleObj = instance_create(x,y,obj_particle);
             particleObj.type = type;
-            particleObj.currentDirection = "u";
+            particleObj.currentDirection = "d";
             particleObj.alarm[1] = 1;
             particleObj.alarm[4] = 1;
             particleObj.isOriginal = false;
