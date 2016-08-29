@@ -82,6 +82,15 @@ else
         endPoint.isFinished = false;
     }
     
+    //Reset neutral masses
+    //show_message(string(instance_number(obj_neutralParticle)));
+    for(i = 0;i &lt; instance_number(obj_neutralParticle);i=i)
+    {
+        neutral = instance_find(obj_neutralParticle,0);
+        with (neutral) instance_destroy();
+        //show_message(string(i));
+    }
+    
     //Create new (reset)
     for(i = 0;i &lt; ds_list_size(obj_controller.initParticleX);i++)
     {

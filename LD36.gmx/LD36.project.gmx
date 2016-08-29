@@ -252,10 +252,11 @@
   <rooms name="rooms">
     <room>rooms\rm_start</room>
     <room>rooms\rm_levelselect1</room>
-    <room>rooms\rm_endgame</room>
     <room>rooms\rm_lvl1</room>
     <room>rooms\rm_lvl2</room>
+    <room>rooms\rm_lvl3</room>
     <room>rooms\room10</room>
+    <room>rooms\rm_endgame</room>
     <room>rooms\room1</room>
   </rooms>
   <help>
