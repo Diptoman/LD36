@@ -107,7 +107,7 @@ room_goto_next();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (endPointReaches == endPoints)
+            <string>if (endPointReaches == endPoints) &amp;&amp; (instance_number(obj_particle) == endPoints)
 {
     if (alarm[0] &lt; 0)
         alarm[0] = 60;
