@@ -71,7 +71,11 @@ if ((!decisionMade) && (canMove))
     {
         //If no destination
         if (portal.destinationID == -1)
+        {
             instance_destroy();
+            canMove = false;
+            decisionMade = true;
+        }
         else
         {
             //Teleport!
