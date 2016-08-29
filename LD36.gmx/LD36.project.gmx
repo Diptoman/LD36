@@ -205,6 +205,7 @@
       <object>objects\obj_endminus</object>
       <object>objects\obj_endplus</object>
       <object>objects\obj_end</object>
+      <object>objects\obj_starter</object>
     </objects>
     <objects name="TweenGMS">
       <object>objects\obj_SharedTweener</object>
@@ -246,9 +247,11 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_endgame</room>
+    <room>rooms\rm_start</room>
     <room>rooms\rm_levelselect1</room>
-    <room>rooms\room0</room>
+    <room>rooms\rm_endgame</room>
+    <room>rooms\rm_lvl1</room>
+    <room>rooms\room10</room>
     <room>rooms\room1</room>
   </rooms>
   <help>

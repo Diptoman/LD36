@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>1</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_buttonParent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -73,6 +73,13 @@ else
         splitter = instance_find(obj_directionalSplitter,i);
         splitter.x = splitter.placeX;
         splitter.y = splitter.placeY;
+    }
+    
+    //Reset endpoints
+    for(i = 0;i &lt; instance_number(obj_end);i++)
+    {
+        endPoint = instance_find(obj_end,i);
+        endPoint.isFinished = false;
     }
     
     //Create new (reset)

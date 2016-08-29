@@ -149,6 +149,83 @@ else if (global.level &gt; levelNum)
         </arguments>
       </action>
     </event>
+    <event eventtype="6" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Go to level
+if (imageIndex!=0)
+{
+    switch(levelNum)
+    {
+        case 1:
+            room_goto(rm_lvl1);
+            break;
+        case 2:
+            room_goto(rm_lvl2);
+            break;
+        case 3:
+            room_goto(rm_lvl3);
+            break;
+        case 4:
+            room_goto(rm_lvl4);
+            break;
+        case 5:
+            room_goto(rm_lvl5);
+            break;
+        case 6:
+            room_goto(rm_lvl6);
+            break;
+        case 7:
+            room_goto(rm_lvl7);
+            break;
+        case 8:
+            room_goto(rm_lvl8);
+            break;
+        case 9:
+            room_goto(rm_lvl9);
+            break;
+        case 10:
+            room_goto(rm_lvl10);
+            break;
+        case 11:
+            room_goto(rm_lvl11);
+            break;
+        case 12:
+            room_goto(rm_lvl12);
+            break;
+        case 13:
+            room_goto(rm_lvl13);
+            break;
+        case 14:
+            room_goto(rm_lvl14);
+            break;
+        case 15:
+            room_goto(rm_lvl15);
+            break;
+        case 16:
+            room_goto(rm_lvl16);
+            break;
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>

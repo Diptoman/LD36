@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>type = "-";
+event_inherited();
 </string>
           </argument>
         </arguments>

@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.level = 6; //Default 1
+            <string>//global.level = 6; //Default 1
 </string>
           </argument>
         </arguments>

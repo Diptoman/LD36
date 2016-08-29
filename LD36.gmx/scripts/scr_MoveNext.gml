@@ -13,6 +13,11 @@ if (endPoint)
     {
         canMove = false;
         decisionMade = true;
+        if (!endPoint.isFinished)
+        {
+            endPoint.isFinished = true;
+            obj_controller.endPointReaches += 1;
+        }
     }
 }
 
