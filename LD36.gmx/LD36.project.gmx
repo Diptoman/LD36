@@ -257,9 +257,11 @@
     <room>rooms\rm_lvl1</room>
     <room>rooms\rm_lvl2</room>
     <room>rooms\rm_lvl3</room>
+    <room>rooms\rm_lvl4</room>
     <room>rooms\rm_lvl5</room>
-    <room>rooms\room10</room>
     <room>rooms\rm_endgame</room>
+    <room>rooms\room10</room>
+    <room>rooms\room9</room>
     <room>rooms\room1</room>
   </rooms>
   <help>

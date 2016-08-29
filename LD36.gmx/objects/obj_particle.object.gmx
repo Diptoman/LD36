@@ -44,6 +44,7 @@ startx = x;
 starty = y;
 
 isOriginal = true; //Whether this was here from the beginning
+checkForCollisions = true;
 </string>
           </argument>
         </arguments>
@@ -69,6 +70,29 @@ isOriginal = true; //Whether this was here from the beginning
             <string>//Delete from list
 ds_list_delete(obj_controller.particleList,ds_list_find_index(obj_controller.particleList,id));
 //show_message("Deleted " + string(ds_list_size(obj_controller.particleList)));
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="9">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>checkForCollisions = true;
 </string>
           </argument>
         </arguments>
@@ -299,7 +323,7 @@ rotationAngle = rotationAngle mod 360;
 draw_sprite_ext(rotatorSprite,0,x,y,image_xscale,image_yscale,rotationAngle,c_white,image_alpha);
 draw_set_halign(fa_center);
 draw_set_valign(fa_center);
-//draw_text(x,y,string(currentDirection));
+draw_text(x,y,string(currentDirection));
 </string>
           </argument>
         </arguments>

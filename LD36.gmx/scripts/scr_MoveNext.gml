@@ -37,6 +37,8 @@ if ((!decisionMade) && (canMove))
             //Teleport!
             x = (portal.destinationID).x;
             y = (portal.destinationID).y;
+            checkForCollisions = false;
+            alarm[9] = 1;
         }
     }
 }
@@ -59,7 +61,7 @@ if ((!decisionMade) && (canMove))
 /*
 Check for existing collision of particles in the same grid
 */
-if ((!decisionMade) && (canMove))
+if ((!decisionMade) && (canMove) && (checkForCollisions))
 {
     otherParticle = collision_point(x,y,obj_particle,0,1);
     if (otherParticle)
@@ -185,40 +187,6 @@ Check for path in the next grid. Can only move if there is a path
 if (collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_path,0,0) && (!decisionMade))
 {
     canMove = true;
-}
-
-/*
-Check for collisions with other particles in the next grid
-*/
-if ((!decisionMade) && (canMove))
-{
-    //No collision with other particle
-    otherParticle = collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_particle,0,1);
-    if (otherParticle)
-    {
-        //If same sign
-        if (otherParticle.type == type)
-        {
-            //Move in reverse
-            if (xDirectionSign != 0) //If left or right
-            {
-                //Change currentDirection
-                if (currentDirection == "l") currentDirection = "r";
-                else if (currentDirection == "r") currentDirection = "l";
-            }
-            else //If up or down
-            {
-                //Change currentDirection
-                if (currentDirection == "d") currentDirection = "u";
-                else if (currentDirection == "u") currentDirection = "d";
-            }
-        }
-        else //If opposite sign
-        {
-            instance_create(x,y,obj_neutralParticle);
-            alarm[2] = 1; //Destroy this
-        }
-    }
 }
 
 /*
@@ -389,6 +357,40 @@ else
     }
     
     //instance_destroy();
+}
+
+/*
+Check for collisions with other particles in the next grid
+*/
+if ((!decisionMade) && (canMove))
+{
+    //No collision with other particle
+    otherParticle = collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_particle,0,1);
+    if (otherParticle)
+    {
+        //If same sign
+        if (otherParticle.type == type)
+        {
+            //Move in reverse
+            if (xDirectionSign != 0) //If left or right
+            {
+                //Change currentDirection
+                if (currentDirection == "l") currentDirection = "r";
+                else if (currentDirection == "r") currentDirection = "l";
+            }
+            else //If up or down
+            {
+                //Change currentDirection
+                if (currentDirection == "d") currentDirection = "u";
+                else if (currentDirection == "u") currentDirection = "d";
+            }
+        }
+        else //If opposite sign
+        {
+            instance_create(x,y,obj_neutralParticle);
+            alarm[2] = 1; //Destroy this
+        }
+    }
 }
 
 /*
