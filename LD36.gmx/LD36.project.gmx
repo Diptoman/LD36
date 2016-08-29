@@ -275,6 +275,7 @@
     </objects>
     <objects name="LevelSelect">
       <object>objects\obj_lvlController</object>
+      <object>objects\obj_endGameController</object>
       <object>objects\obj_levelTriangle</object>
       <object>objects\obj_hoverParticles</object>
       <object>objects\obj_illuminatti</object>
