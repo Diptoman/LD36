@@ -51,7 +51,8 @@ x-=64;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_restart();
+            <string>event_inherited();
+room_restart();
 </string>
           </argument>
         </arguments>

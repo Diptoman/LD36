@@ -114,7 +114,7 @@ else if (global.level &gt; levelNum)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (imageIndex!=0)
+            <string>//if (imageIndex!=0)
 {
     TweenFire(id,image_index__,EaseLinear,0,0,0,9,9,0);
 }
@@ -140,7 +140,7 @@ else if (global.level &gt; levelNum)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (imageIndex!=0)
+            <string>//if (imageIndex!=0)
 {
     TweenFire(id,image_index__,EaseLinear,0,0,0,9,0,9);
 }

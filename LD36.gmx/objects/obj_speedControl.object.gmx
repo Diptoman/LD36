@@ -65,6 +65,7 @@ else
 {
     global.alarmTiming /= 2;
 }
+event_inherited();
 </string>
           </argument>
         </arguments>

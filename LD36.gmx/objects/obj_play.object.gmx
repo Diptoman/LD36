@@ -51,6 +51,7 @@ instance_create(x+224,y,obj_speedControl);
           <argument>
             <kind>1</kind>
             <string>//Play or Stop
+event_inherited();
 if (obj_controller.mode == "Placement")
 {
     obj_controller.mode = "Play";

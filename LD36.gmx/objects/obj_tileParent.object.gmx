@@ -109,6 +109,8 @@ typeNum = -1;
         }
     }
 }
+
+audio_play_sound(snd_click2,10,0);
 </string>
           </argument>
         </arguments>
