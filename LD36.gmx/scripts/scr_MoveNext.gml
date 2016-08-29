@@ -273,6 +273,77 @@ if ((!decisionMade) && (canMove))
             else if (currentDirection == "u") currentDirection = "d";
         }
         
+        
+    //Check if on directional changer
+    directionChanger = collision_point(x,y,obj_directionalPath,0,1);
+    if (directionChanger) && (!collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_particle,0,1))
+    {
+        var changeDirection;
+        changeDirection = false;
+        
+        if (currentDirection == "l") //Left
+        {
+            if ((directionChanger.direction1 == "r") || (directionChanger.direction2 == "r"))
+            {
+                changeDirection = true;
+                //Change currentDirection
+                if (directionChanger.direction1 == "r") currentDirection = directionChanger.direction2;
+                else currentDirection = directionChanger.direction1; 
+            }
+        } 
+        else if (currentDirection == "r") //Right
+        {
+            if ((directionChanger.direction1 == "l") || (directionChanger.direction2 == "l"))
+            {
+                changeDirection = true;
+                //Change currentDirection
+                if (directionChanger.direction1 == "l") currentDirection = directionChanger.direction2;
+                else currentDirection = directionChanger.direction1;
+            }
+        }
+        else if (currentDirection == "u") //Up
+        {
+            if ((directionChanger.direction1 == "d") || (directionChanger.direction2 == "d"))
+            {
+                changeDirection = true;
+                //Change currentDirection
+                if (directionChanger.direction1 == "d") currentDirection = directionChanger.direction2;
+                else currentDirection = directionChanger.direction1;
+            }
+        }
+        else if (currentDirection == "d") //Down
+        {
+            if ((directionChanger.direction1 == "u") || (directionChanger.direction2 == "u"))
+            {
+                changeDirection = true;
+                //Change currentDirection
+                if (directionChanger.direction1 == "u") currentDirection = directionChanger.direction2;
+                else currentDirection = directionChanger.direction1;
+            }
+        }
+        
+        if (currentDirection == "r")
+        {
+            xDirectionSign = 1;
+            yDirectionSign = 0;
+        }
+        else if (currentDirection == "l")
+        {
+            xDirectionSign = -1;
+            yDirectionSign = 0;
+        }
+        else if (currentDirection == "u")
+        {
+            xDirectionSign = 0;
+            yDirectionSign = -1;
+        }
+        else if (currentDirection == "d")
+        {
+            xDirectionSign = 0;
+            yDirectionSign = 1;
+        }
+    }
+        
     }
 }
 

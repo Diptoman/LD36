@@ -115,6 +115,8 @@
       <sprite>sprites\spr_startArrowRight</sprite>
       <sprite>sprites\spr_startArrowDown</sprite>
       <sprite>sprites\spr_startArrowLeft</sprite>
+      <sprite>sprites\spr_eyeopen</sprite>
+      <sprite>sprites\spr_levelSelectForeground</sprite>
     </sprites>
     <sprites name="UI">
       <sprite>sprites\spr_play</sprite>
@@ -272,6 +274,9 @@
     <room>rooms\rm_lvl5</room>
     <room>rooms\rm_lvl6</room>
     <room>rooms\rm_lvl7</room>
+    <room>rooms\rm_lvl8</room>
+    <room>rooms\rm_lvl9</room>
+    <room>rooms\room15</room>
     <room>rooms\rm_endgame</room>
     <room>rooms\room9</room>
     <room>rooms\room10</room>
