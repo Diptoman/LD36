@@ -120,10 +120,7 @@
     </sprites>
     <sprites name="Bg">
       <sprite>sprites\spr_pyramid</sprite>
-      <sprite>sprites\spr_pyramidGlow1</sprite>
-      <sprite>sprites\spr_pyramidGlow2</sprite>
-      <sprite>sprites\spr_pyramidGlow3</sprite>
-      <sprite>sprites\spr_pyramidGlow4</sprite>
+      <sprite>sprites\spr_pyramidGlow</sprite>
       <sprite>sprites\spr_decor</sprite>
       <sprite>sprites\spr_triangle</sprite>
       <sprite>sprites\spr_bigTriangle</sprite>
