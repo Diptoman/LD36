@@ -119,7 +119,10 @@ else if (type == 2)
 }
 
 if (!audio_is_playing(snd_i1))
+{
     audio_play_sound(snd_i1,10,0);
+    audio_sound_gain(snd_i1,.5,0);
+}
 
 alarm[2] = 90;
 </string>
@@ -165,7 +168,10 @@ else if (type == 3)
 }
 
 if (!audio_is_playing(snd_i1))
+{
     audio_play_sound(snd_i1,10,0);
+    audio_sound_gain(snd_i1,.5,0);
+}
     
 alarm[3] = 90;
 

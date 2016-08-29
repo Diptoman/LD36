@@ -114,6 +114,8 @@ room_goto_next();
         alarm[0] = 130;
         audio_pause_sound(snd_bg);
         audio_play_sound(snd_finish,10,0);
+        audio_sound_gain(snd_finish,.5,0);
+
     }
 }
 </string>

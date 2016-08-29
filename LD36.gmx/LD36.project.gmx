@@ -87,6 +87,7 @@
     <sound>sound\snd_click3</sound>
     <sound>sound\snd_i2</sound>
     <sound>sound\snd_i1</sound>
+    <sound>sound\snd_i3</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="User Elements">
