@@ -70,9 +70,9 @@ endPoints = 1;
             <string>///Go to next level
 
 //Save if necessary
-if (global.currentLevel &lt; global.level)
+if (global.currentLevel &gt;= global.level)
 {
-    ds_list_replace(global.data,0,global.currentLevel);
+    ds_list_replace(global.data,0,global.currentLevel + 1);
     tempfile=file_text_open_write("GameData.at");
     file_text_write_string(tempfile,ds_list_write(global.data));
     file_text_close(tempfile);

@@ -169,6 +169,7 @@ else if (global.level &gt; levelNum)
             <string>///Go to level
 if (imageIndex!=0)
 {
+    global.currentLevel = levelNum;
     switch(levelNum)
     {
         case 1:
