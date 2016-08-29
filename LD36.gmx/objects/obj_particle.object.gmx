@@ -98,6 +98,44 @@ ds_list_delete(obj_controller.particleList,ds_list_find_index(obj_controller.par
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>otherParticle = collision_point(x,y,obj_particle,0,1);
+if (otherParticle)
+{
+    //If same sign
+        if (otherParticle.type == type)
+        {
+            //If same direction (bugged), delete one
+            if (otherParticle.currentDirection == currentDirection)
+            {
+                instance_destroy();
+                canMove = false;
+                decisionMade = true;
+                show_message(string(other.currentDirection) + string(currentDirection));
+            }
+        }
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="4">
       <action>
         <libid>1</libid>

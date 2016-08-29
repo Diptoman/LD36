@@ -114,13 +114,11 @@ if ((!decisionMade) && (canMove) && (checkForCollisions))
         if (otherParticle.type == type)
         {
             //If same direction (bugged), delete one
-            if (otherParticle.currentDirection == currentDirection)
-            {
-                instance_destroy();
-                canMove = false;
-                decisionMade = true;
-            }
-            else
+            //if (otherParticle.currentDirection == currentDirection)
+            //{
+                //alarm[5] = global.alarmTiming;
+            //}
+            //else
             {   //Move in reverse
                 if (xDirectionSign != 0) //If left or right
                 {
@@ -561,3 +559,21 @@ if (canMove)
     }
         
 }
+
+//Final check
+otherParticle = collision_point(x,y,obj_particle,0,1);
+if (otherParticle)
+{
+    //If same sign
+        if (otherParticle.type == type)
+        {
+            //If same direction (bugged), delete one
+            if (otherParticle.currentDirection == currentDirection)
+            {
+                instance_destroy();
+                canMove = false;
+                decisionMade = true;
+                //show_message(string(other.currentDirection) + string(currentDirection));
+            }
+        }
+    }
