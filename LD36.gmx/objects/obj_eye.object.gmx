@@ -77,7 +77,7 @@ a.text = "Joel Montpetit (audio)"
           <argument>
             <kind>1</kind>
             <string>a = instance_create(room_width/2,656+32,obj_text);
-a.text = "Pranjal Bisht (Art)"
+a.text = "Pranjal Bisht (Art, design)"
 </string>
           </argument>
         </arguments>

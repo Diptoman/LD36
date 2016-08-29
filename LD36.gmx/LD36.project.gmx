@@ -196,6 +196,7 @@
   <fonts name="fonts">
     <font>fonts\fnt_main</font>
     <font>fonts\fnt_icon</font>
+    <font>fonts\fnt_speed</font>
   </fonts>
   <objects name="objects">
     <objects name="User Elements">
@@ -254,6 +255,7 @@
       </objects>
       <object>objects\obj_play</object>
       <object>objects\obj_restart</object>
+      <object>objects\obj_speedControl</object>
       <object>objects\obj_UIBox</object>
       <object>objects\obj_text</object>
     </objects>
