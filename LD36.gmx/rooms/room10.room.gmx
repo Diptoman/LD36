@@ -67,7 +67,7 @@
     <instance objName="obj_path" x="512" y="512" name="inst_39DD1382" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_path_UI" x="1088" y="192" name="inst_B6E60BDA" locked="0" code="num = 3;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ldPath_UI" x="1152" y="192" name="inst_B108F360" locked="0" code="num = 3;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_portal_UI" x="1280" y="192" name="inst_D2D0E50A" locked="0" code="typeNum = 1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_portal_UI" x="1280" y="192" name="inst_D2D0E50A" locked="0" code="typeNum = 1;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_portal_UI" x="1088" y="256" name="inst_6846AACB" locked="0" code="typeNum = 2;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_colorShifter_UI" x="1216" y="256" name="inst_FFEF53B1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_play" x="1120" y="512" name="inst_5C866BCD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
