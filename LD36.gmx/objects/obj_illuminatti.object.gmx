@@ -31,6 +31,30 @@
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (!audio_is_playing(snd_i2))
+    audio_play_sound(snd_i2,10,0);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="2">
       <action>
         <libid>1</libid>
@@ -91,6 +115,9 @@ else if (type == 2)
     TweenFire(id,y__,EaseInOutQuad,0,0,0,60,y,y+48);
 }
 
+if (!audio_is_playing(snd_i1))
+    audio_play_sound(snd_i1,10,0);
+
 alarm[2] = 90;
 </string>
           </argument>
@@ -133,6 +160,11 @@ else if (type == 3)
     //Start rotating
     TweenFire(id,image_angle__,EaseInOutQuad,0,0,90,120,0,360*20+180);
 }
+
+if (!audio_is_playing(snd_i1))
+    audio_play_sound(snd_i1,10,0);
+    
+alarm[3] = 90;
 
 alarm[1] = 240;
 </string>
