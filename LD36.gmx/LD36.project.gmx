@@ -133,6 +133,7 @@
     <sprites name="Bg">
       <sprite>sprites\spr_pyramid</sprite>
       <sprite>sprites\spr_pyramidGlow</sprite>
+      <sprite>sprites\spr_greenGlowFlash</sprite>
       <sprite>sprites\spr_decor</sprite>
       <sprite>sprites\spr_triangle</sprite>
       <sprite>sprites\spr_bigTriangle</sprite>
