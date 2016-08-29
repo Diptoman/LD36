@@ -114,6 +114,8 @@ room_goto_next();
         alarm[0] = 130;
         audio_pause_sound(snd_bg);
         audio_play_sound(snd_finish,10,0);
+        audio_sound_gain(snd_finish,.5,0);
+
     }
 }
 </string>
@@ -252,7 +254,37 @@ if ((mode == "Placement") &amp;&amp; (currentSelection != ""))
         if (toCreateObject!=-1)
         {
             blankArea = collision_point(floor((mouse_x+16)/32)*32, floor((mouse_y+16)/32)*32,obj_blankArea,0,0);
-            if (!blankArea.isFilled)
+            if (blankArea.isFilled)
+            {
+                //If portal
+            if (blankArea.tileType == "portal")
+            {
+                ds_list_delete(portalList,ds_list_find_index(portalList,blankArea.tileID));
+            }
+            
+            //If splitter, delete underlying paths
+            if ((blankArea.tileType == "ldSplitter") 
+            || (blankArea.tileType == "rdSplitter")
+            || (blankArea.tileType == "luSplitter")
+            || (blankArea.tileType == "ruSplitter")
+            || (blankArea.tileType == "rlSplitter")
+            || (blankArea.tileType == "udSplitter"))
+            {
+                path = collision_point(blankArea.x,blankArea.y,obj_path,0,0);
+                with (path) instance_destroy();
+            }
+            
+            blankArea.tileType = "";
+            blankArea.isFilled = false;
+            (blankArea.selectionID).num += 1;
+            blankArea.selectionID = -1;
+        
+            with (blankArea.tileID) instance_destroy();
+            blankArea.tileID = -1;
+            }
+            
+            
+            //if (!blankArea.isFilled)
             {
                 tile = instance_create(floor((mouse_x+16)/32)*32, floor((mouse_y+16)/32)*32,toCreateObject);
                 blankArea.tileID = tile;

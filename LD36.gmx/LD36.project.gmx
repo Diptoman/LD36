@@ -85,6 +85,9 @@
     <sound>sound\snd_click</sound>
     <sound>sound\snd_click2</sound>
     <sound>sound\snd_click3</sound>
+    <sound>sound\snd_i2</sound>
+    <sound>sound\snd_i1</sound>
+    <sound>sound\snd_i3</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="User Elements">
@@ -274,6 +277,7 @@
     </objects>
     <objects name="LevelSelect">
       <object>objects\obj_lvlController</object>
+      <object>objects\obj_endGameController</object>
       <object>objects\obj_levelTriangle</object>
       <object>objects\obj_hoverParticles</object>
       <object>objects\obj_illuminatti</object>
