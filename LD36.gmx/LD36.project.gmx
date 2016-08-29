@@ -111,10 +111,12 @@
       <sprite>sprites\spr_minuspoint</sprite>
       <sprite>sprites\spr_minusPointPulse</sprite>
       <sprite>sprites\spr_blankArea</sprite>
+      <sprite>sprites\spr_startArrow</sprite>
     </sprites>
     <sprites name="UI">
       <sprite>sprites\spr_play</sprite>
       <sprite>sprites\spr_uiBox</sprite>
+      <sprite>sprites\spr_numberCircle</sprite>
     </sprites>
     <sprites name="Bg">
       <sprite>sprites\spr_decor</sprite>
