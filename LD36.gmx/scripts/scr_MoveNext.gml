@@ -2,6 +2,7 @@ var xDirectionSign = argument0; //+1, 0 or -1
 var yDirectionSign = argument1; //+1, 0 or -1
 var decisionMade = false;
 canMove = true;
+hasBounced = false;
 
 /*
 Check for end point
@@ -455,6 +456,8 @@ else
     else if (currentDirection == "r")
         currentDirection = "l";
         
+    hasBounced = true;
+        
     //Check if on directional changer
     directionChanger = collision_point(x,y,obj_directionalPath,0,1);
     if (directionChanger) && (!collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_particle,0,1))
@@ -526,6 +529,33 @@ else
     }
     
     //instance_destroy();
+}
+
+if (hasBounced)
+{
+    //Portal check
+    if ((!decisionMade) && (canMove))
+{
+    portal = collision_point(x,y,obj_portal,0,1);
+    if (portal)
+    {
+        //If no destination
+        if (portal.destinationID == -1)
+        {
+            instance_destroy();
+            canMove = false;
+            decisionMade = true;
+        }
+        else
+        {
+            //Teleport!
+            x = (portal.destinationID).x;
+            y = (portal.destinationID).y;
+            checkForCollisions = false;
+            alarm[9] = 1;
+        }
+    }
+}
 }
 
 /*
