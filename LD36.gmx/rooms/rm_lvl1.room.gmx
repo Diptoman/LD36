@@ -137,6 +137,8 @@
     <instance objName="obj_blankArea" x="320" y="320" name="inst_93BB8DCD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_blankArea" x="640" y="320" name="inst_1085CB98" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_blankArea" x="640" y="288" name="inst_468AB924" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_startArrowLeft" x="352" y="544" name="inst_5D658D70" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_startArrowRight" x="608" y="544" name="inst_D9A80296" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

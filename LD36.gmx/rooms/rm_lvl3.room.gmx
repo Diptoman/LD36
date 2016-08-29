@@ -184,6 +184,12 @@
     <instance objName="obj_UIBox" x="960" y="160" name="inst_69EAD129" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_restart" x="1216" y="544" name="inst_CA34369B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_path_UI" x="1184" y="224" name="inst_1EF43CB4" locked="0" code="num = 3;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_startArrowUp" x="128" y="320" name="inst_8EA5278A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_startArrowUp" x="128" y="448" name="inst_AB552174" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_startArrowUp" x="800" y="448" name="inst_A479CCFE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_startArrowUp" x="800" y="320" name="inst_055136BC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_startArrowLeft" x="256" y="608" name="inst_A68C7B46" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_startArrowRight" x="672" y="608" name="inst_85304532" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

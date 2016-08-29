@@ -19,6 +19,46 @@ if (endPoint)
             obj_controller.endPointReaches += 1;
         }
     }
+    else
+    {
+        if (currentDirection == "r")
+        {
+            currentDirection = "l";
+        }
+        else if (currentDirection == "l")
+        {
+            currentDirection = "r";
+        }
+        else if (currentDirection == "u")
+        {
+            currentDirection = "d";
+        }
+        else if (currentDirection == "d")
+        {
+            currentDirection = "u";
+        }
+        
+        if (currentDirection == "r")
+        {
+            xDirectionSign = 1;
+            yDirectionSign = 0;
+        }
+        else if (currentDirection == "l")
+        {
+            xDirectionSign = -1;
+            yDirectionSign = 0;
+        }
+        else if (currentDirection == "u")
+        {
+            xDirectionSign = 0;
+            yDirectionSign = -1;
+        }
+        else if (currentDirection == "d")
+        {
+            xDirectionSign = 0;
+            yDirectionSign = 1;
+        }
+    }
 }
 
 /*
@@ -92,94 +132,6 @@ if ((!decisionMade) && (canMove) && (checkForCollisions))
     }
 }
 
-/*
-Check for splitters, after collision checking done
-*/
-if ((!decisionMade) && (canMove))
-{
-    splitter = collision_point(x,y,obj_directionalSplitter,0,1);
-    if (splitter)
-    {
-        //Left split
-        if ((splitter.direction1 == "l") || (splitter.direction2 == "l")) 
-        {
-            particleObj = instance_create(x,y,obj_particle);
-            particleObj.type = type;
-            particleObj.currentDirection = "r";
-            particleObj.alarm[1] = 1;
-            particleObj.alarm[4] = 1;
-            particleObj.isOriginal = false;
-        }
-        //Right split
-        if ((splitter.direction1 == "r") || (splitter.direction2 == "r")) 
-        {
-            particleObj = instance_create(x,y,obj_particle);
-            particleObj.type = type;
-            particleObj.currentDirection = "l";
-            particleObj.alarm[1] = 1;
-            particleObj.alarm[4] = 1;
-            particleObj.isOriginal = false;
-        }
-        //Up split
-        if ((splitter.direction1 == "u") || (splitter.direction2 == "u")) 
-        {
-            particleObj = instance_create(x,y,obj_particle);
-            particleObj.type = type;
-            particleObj.currentDirection = "d";
-            particleObj.alarm[1] = 1;
-            particleObj.alarm[4] = 1;
-            particleObj.isOriginal = false;
-        }
-        //Down split
-        if ((splitter.direction1 == "d") || (splitter.direction2 == "d")) 
-        {
-            particleObj = instance_create(x,y,obj_particle);
-            particleObj.type = type;
-            particleObj.currentDirection = "u";
-            particleObj.alarm[1] = 1;
-            particleObj.alarm[4] = 1;
-            particleObj.isOriginal = false;
-        }
-        //Stop other actions and delete this
-        decisionMade = true;
-        alarm[2] = 1;
-        
-        //Create path if not already there
-        if (!collision_point(splitter.x,splitter.y,obj_path,0,0))
-            instance_create(splitter.x,splitter.y,obj_path);
-        
-        //Move the splitter out of view to be taken back later
-        splitter.placeX = splitter.x;
-        splitter.placeY = splitter.y;
-        splitter.x = -32;
-        splitter.y = -32;
-    }
-}
-
-/*
-Check for neutral particle collision
-*/
-if ((!decisionMade) && (canMove))
-{
-    //No collision with other particle
-    neutralParticle = collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_neutralParticle,0,1);
-    if (neutralParticle)
-    {
-        //Move in reverse
-        if (xDirectionSign != 0) //If left or right
-        {
-            //Change currentDirection
-            if (currentDirection == "l") currentDirection = "r";
-            else if (currentDirection == "r") currentDirection = "l";
-        }
-        else //If up or down
-        {
-            //Change currentDirection
-            if (currentDirection == "d") currentDirection = "u";
-            else if (currentDirection == "u") currentDirection = "d";
-        }
-    }
-}
 
 /*
 Check for path in the next grid. Can only move if there is a path
@@ -195,7 +147,7 @@ Check for direction changer
 if ((!decisionMade) && (canMove))
 {
     directionChanger = collision_point(x,y,obj_directionalPath,0,1);
-    if (directionChanger)
+    if (directionChanger) && (!collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_particle,0,1))
     {
         var changeDirection;
         changeDirection = false;
@@ -264,6 +216,130 @@ if ((!decisionMade) && (canMove))
     }
 }
 
+/*
+Check for collisions with other particles in the next grid
+*/
+if ((!decisionMade) && (canMove))
+{
+    //No collision with other particle
+    otherParticle = collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_particle,0,1);
+    if (otherParticle)
+    {
+        //If same sign
+        if (otherParticle.type == type)
+        {
+            //Move in reverse
+            if (xDirectionSign != 0) //If left or right
+            {
+                //Change currentDirection
+                if (currentDirection == "l") currentDirection = "r";
+                else if (currentDirection == "r") currentDirection = "l";
+            }
+            else //If up or down
+            {
+                //Change currentDirection
+                if (currentDirection == "d") currentDirection = "u";
+                else if (currentDirection == "u") currentDirection = "d";
+            }
+        }
+        else //If opposite sign
+        {
+            instance_create(x,y,obj_neutralParticle);
+            alarm[2] = 1; //Destroy this
+        }
+    }
+}
+
+/*
+Check for neutral particle collision
+*/
+if ((!decisionMade) && (canMove))
+{
+    //No collision with other particle
+    neutralParticle = collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_neutralParticle,0,1);
+    if (neutralParticle)
+    {
+        //Move in reverse
+        if (xDirectionSign != 0) //If left or right
+        {
+            //Change currentDirection
+            if (currentDirection == "l") currentDirection = "r";
+            else if (currentDirection == "r") currentDirection = "l";
+        }
+        else //If up or down
+        {
+            //Change currentDirection
+            if (currentDirection == "d") currentDirection = "u";
+            else if (currentDirection == "u") currentDirection = "d";
+        }
+        
+    }
+}
+
+/*
+Check for splitters, after collision checking done
+*/
+if ((!decisionMade) && (canMove))
+{
+    splitter = collision_point(x,y,obj_directionalSplitter,0,1);
+    if (splitter)
+    {
+        //Left split
+        if ((splitter.direction1 == "l") || (splitter.direction2 == "l")) 
+        {
+            particleObj = instance_create(x,y,obj_particle);
+            particleObj.type = type;
+            particleObj.currentDirection = "r";
+            particleObj.alarm[1] = 1;
+            particleObj.alarm[4] = 1;
+            particleObj.isOriginal = false;
+        }
+        //Right split
+        if ((splitter.direction1 == "r") || (splitter.direction2 == "r")) 
+        {
+            particleObj = instance_create(x,y,obj_particle);
+            particleObj.type = type;
+            particleObj.currentDirection = "l";
+            particleObj.alarm[1] = 1;
+            particleObj.alarm[4] = 1;
+            particleObj.isOriginal = false;
+        }
+        //Up split
+        if ((splitter.direction1 == "u") || (splitter.direction2 == "u")) 
+        {
+            particleObj = instance_create(x,y,obj_particle);
+            particleObj.type = type;
+            particleObj.currentDirection = "d";
+            particleObj.alarm[1] = 1;
+            particleObj.alarm[4] = 1;
+            particleObj.isOriginal = false;
+        }
+        //Down split
+        if ((splitter.direction1 == "d") || (splitter.direction2 == "d")) 
+        {
+            particleObj = instance_create(x,y,obj_particle);
+            particleObj.type = type;
+            particleObj.currentDirection = "u";
+            particleObj.alarm[1] = 1;
+            particleObj.alarm[4] = 1;
+            particleObj.isOriginal = false;
+        }
+        //Stop other actions and delete this
+        decisionMade = true;
+        alarm[2] = 1;
+        
+        //Create path if not already there
+        if (!collision_point(splitter.x,splitter.y,obj_path,0,0))
+            instance_create(splitter.x,splitter.y,obj_path);
+        
+        //Move the splitter out of view to be taken back later
+        splitter.placeX = splitter.x;
+        splitter.placeY = splitter.y;
+        splitter.x = -32;
+        splitter.y = -32;
+    }
+}
+
 //Bounce if next grid is not a tile
 if (collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_path,0,1) 
     || collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_directionalPath,0,1) 
@@ -288,7 +364,7 @@ else
         
     //Check if on directional changer
     directionChanger = collision_point(x,y,obj_directionalPath,0,1);
-    if (directionChanger)
+    if (directionChanger) && (!collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_particle,0,1))
     {
         var changeDirection;
         changeDirection = false;
@@ -357,40 +433,6 @@ else
     }
     
     //instance_destroy();
-}
-
-/*
-Check for collisions with other particles in the next grid
-*/
-if ((!decisionMade) && (canMove))
-{
-    //No collision with other particle
-    otherParticle = collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_particle,0,1);
-    if (otherParticle)
-    {
-        //If same sign
-        if (otherParticle.type == type)
-        {
-            //Move in reverse
-            if (xDirectionSign != 0) //If left or right
-            {
-                //Change currentDirection
-                if (currentDirection == "l") currentDirection = "r";
-                else if (currentDirection == "r") currentDirection = "l";
-            }
-            else //If up or down
-            {
-                //Change currentDirection
-                if (currentDirection == "d") currentDirection = "u";
-                else if (currentDirection == "u") currentDirection = "d";
-            }
-        }
-        else //If opposite sign
-        {
-            instance_create(x,y,obj_neutralParticle);
-            alarm[2] = 1; //Destroy this
-        }
-    }
 }
 
 /*

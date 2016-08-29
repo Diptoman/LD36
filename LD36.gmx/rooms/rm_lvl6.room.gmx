@@ -161,7 +161,7 @@
     <instance objName="obj_path" x="736" y="512" name="inst_EFD4313D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_path" x="736" y="544" name="inst_8FB1808B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_path" x="736" y="576" name="inst_9D89EDED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_particle" x="288" y="480" name="inst_6BAE533C" locked="0" code="type = &quot;-&quot;;&#xA;currentDirection = &quot;l&quot;;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_particle" x="288" y="480" name="inst_6BAE533C" locked="0" code="type = &quot;-&quot;;&#xA;currentDirection = &quot;l&quot;;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_luPath" x="832" y="672" name="inst_DFC9C816" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_luPath" x="832" y="288" name="inst_EC598973" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rdPath" x="128" y="96" name="inst_37AC499A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -186,6 +186,10 @@
     <instance objName="obj_blankArea" x="832" y="480" name="inst_8CAD4D59" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ldPath_UI" x="1248" y="192" name="inst_018F9300" locked="0" code="num = 3;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ldPath" x="736" y="96" name="inst_5D97EFC6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_startArrowDown" x="320" y="160" name="inst_3EE46133" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_startArrowDown" x="640" y="160" name="inst_6AB723F3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_startArrowUp" x="640" y="608" name="inst_D48E5EA1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_startArrowLeft" x="256" y="480" name="inst_C8705ABF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

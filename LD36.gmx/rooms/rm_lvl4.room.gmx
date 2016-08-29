@@ -194,6 +194,10 @@
     <instance objName="obj_blankArea" x="640" y="224" name="inst_BBB59183" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rdPath" x="320" y="64" name="inst_D9341FC9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ldPath" x="640" y="64" name="inst_B56659A3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_startArrowUp" x="128" y="640" name="inst_424DBEAD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_startArrowUp" x="832" y="640" name="inst_B9C07AD3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_startArrowRight" x="320" y="672" name="inst_9AD3063F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_startArrowLeft" x="640" y="672" name="inst_28338D4F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

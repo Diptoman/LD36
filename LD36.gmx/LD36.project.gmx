@@ -111,7 +111,10 @@
       <sprite>sprites\spr_minuspoint</sprite>
       <sprite>sprites\spr_minusPointPulse</sprite>
       <sprite>sprites\spr_blankArea</sprite>
-      <sprite>sprites\spr_startArrow</sprite>
+      <sprite>sprites\spr_startArrowUp</sprite>
+      <sprite>sprites\spr_startArrowRight</sprite>
+      <sprite>sprites\spr_startArrowDown</sprite>
+      <sprite>sprites\spr_startArrowLeft</sprite>
     </sprites>
     <sprites name="UI">
       <sprite>sprites\spr_play</sprite>
@@ -215,6 +218,10 @@
       <object>objects\obj_end</object>
       <object>objects\obj_starter</object>
       <object>objects\obj_endPointPulse</object>
+      <object>objects\obj_startArrowUp</object>
+      <object>objects\obj_startArrowDown</object>
+      <object>objects\obj_startArrowLeft</object>
+      <object>objects\obj_startArrowRight</object>
     </objects>
     <objects name="TweenGMS">
       <object>objects\obj_SharedTweener</object>
@@ -264,6 +271,7 @@
     <room>rooms\rm_lvl4</room>
     <room>rooms\rm_lvl5</room>
     <room>rooms\rm_lvl6</room>
+    <room>rooms\rm_lvl7</room>
     <room>rooms\rm_endgame</room>
     <room>rooms\room9</room>
     <room>rooms\room10</room>
