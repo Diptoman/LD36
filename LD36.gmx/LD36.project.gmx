@@ -78,7 +78,9 @@
   <NewExtensions>
     <extension index="0">extensions\TweenGMS</extension>
   </NewExtensions>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_bg</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="User Elements">
       <sprite>sprites\spr_path</sprite>
@@ -119,6 +121,9 @@
     <sprites name="Bg">
       <sprite>sprites\spr_decor</sprite>
       <sprite>sprites\spr_triangle</sprite>
+      <sprite>sprites\spr_bigTriangle</sprite>
+      <sprite>sprites\spr_hover</sprite>
+      <sprite>sprites\spr_eyeopen</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -204,12 +209,15 @@
       <object>objects\obj_endminus</object>
       <object>objects\obj_endplus</object>
       <object>objects\obj_end</object>
+      <object>objects\obj_starter</object>
+      <object>objects\obj_endPointPulse</object>
     </objects>
     <objects name="TweenGMS">
       <object>objects\obj_SharedTweener</object>
     </objects>
     <objects name="UI">
       <object>objects\obj_tileParent</object>
+      <object>objects\obj_buttonParent</object>
       <objects name="Tiles">
         <object>objects\obj_path_UI</object>
         <object>objects\obj_ldPath_UI</object>
@@ -229,6 +237,7 @@
       <object>objects\obj_play</object>
       <object>objects\obj_restart</object>
       <object>objects\obj_UIBox</object>
+      <object>objects\obj_text</object>
     </objects>
     <objects name="Extras">
       <object>objects\obj_decorProducer</object>
@@ -236,11 +245,20 @@
     </objects>
     <objects name="LevelSelect">
       <object>objects\obj_lvlController</object>
+      <object>objects\obj_levelTriangle</object>
+      <object>objects\obj_hoverParticles</object>
+      <object>objects\obj_illuminatti</object>
+      <object>objects\obj_eye</object>
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
-    <room>rooms\rm_levelselect</room>
+    <room>rooms\rm_start</room>
+    <room>rooms\rm_levelselect1</room>
+    <room>rooms\rm_lvl1</room>
+    <room>rooms\rm_lvl2</room>
+    <room>rooms\rm_lvl3</room>
+    <room>rooms\room10</room>
+    <room>rooms\rm_endgame</room>
     <room>rooms\room1</room>
   </rooms>
   <help>

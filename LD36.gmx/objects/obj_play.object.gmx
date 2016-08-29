@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>1</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_buttonParent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -73,6 +73,22 @@ else
         splitter = instance_find(obj_directionalSplitter,i);
         splitter.x = splitter.placeX;
         splitter.y = splitter.placeY;
+    }
+    
+    //Reset endpoints
+    for(i = 0;i &lt; instance_number(obj_end);i++)
+    {
+        endPoint = instance_find(obj_end,i);
+        endPoint.isFinished = false;
+    }
+    
+    //Reset neutral masses
+    //show_message(string(instance_number(obj_neutralParticle)));
+    for(i = 0;i &lt; instance_number(obj_neutralParticle);i=i)
+    {
+        neutral = instance_find(obj_neutralParticle,0);
+        with (neutral) instance_destroy();
+        //show_message(string(i));
     }
     
     //Create new (reset)

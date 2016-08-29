@@ -13,6 +13,11 @@ if (endPoint)
     {
         canMove = false;
         decisionMade = true;
+        if (!endPoint.isFinished)
+        {
+            endPoint.isFinished = true;
+            obj_controller.endPointReaches += 1;
+        }
     }
 }
 
@@ -24,9 +29,15 @@ if ((!decisionMade) && (canMove))
     portal = collision_point(x,y,obj_portal,0,1);
     if (portal)
     {
-        //Teleport!
-        x = (portal.destinationID).x;
-        y = (portal.destinationID).y;
+        //If no destination
+        if (portal.destinationID == -1)
+            instance_destroy();
+        else
+        {
+            //Teleport!
+            x = (portal.destinationID).x;
+            y = (portal.destinationID).y;
+        }
     }
 }
 
@@ -130,9 +141,16 @@ if ((!decisionMade) && (canMove))
         //Stop other actions and delete this
         decisionMade = true;
         alarm[2] = 1;
-        //Change splitter to normal tile
-        instance_create(splitter.x,splitter.y,obj_path);
-        with (splitter) instance_destroy();
+        
+        //Create path if not already there
+        if (!collision_point(splitter.x,splitter.y,obj_path,0,0))
+            instance_create(splitter.x,splitter.y,obj_path);
+        
+        //Move the splitter out of view to be taken back later
+        splitter.placeX = splitter.x;
+        splitter.placeY = splitter.y;
+        splitter.x = -32;
+        splitter.y = -32;
     }
 }
 
@@ -257,6 +275,33 @@ if ((!decisionMade) && (canMove))
     }
 }
 
+//Bounce if next grid is not a tile
+if (collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_path,0,1) 
+    || collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_directionalPath,0,1) 
+    || collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_directionalSplitter,0,1)
+    || collision_point(x,y,obj_directionalPath,0,1) 
+    || collision_point(x,y,obj_directionalSplitter,0,1)
+    || collision_point(x,y,obj_portal,0,1)
+    || collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_portal,0,1)
+    || collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_end,0,1)
+    || collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_colorShifter,0,1)
+    || collision_point(x,y,obj_end,0,1))
+{
+    
+}
+else
+{
+    if (currentDirection == "u")
+        currentDirection = "d";
+    else if (currentDirection == "d")
+        currentDirection = "u";
+    else if (currentDirection == "l")
+        currentDirection = "r";
+    else if (currentDirection == "r")
+        currentDirection = "l";
+    //instance_destroy();
+}
+
 /*
 Move to next grid based on final currentDirection
 */
@@ -288,17 +333,3 @@ if (canMove)
     }
         
 }
-
-//Destroy if next grid is not a tile
-if (collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_path,0,1) 
-    || collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_directionalPath,0,1) 
-    || collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_directionalSplitter,0,1)
-    || collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_portal,0,1)
-    || collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_end,0,1)
-    || collision_point(x+xDirectionSign*32,y+yDirectionSign*32,obj_colorShifter,0,1)
-    || collision_point(x,y,obj_end,0,1))
-{
-    
-}
-else
-    instance_destroy();
