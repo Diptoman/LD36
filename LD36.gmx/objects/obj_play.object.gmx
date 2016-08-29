@@ -101,6 +101,7 @@ else
     }
     ds_list_clear(obj_controller.particleList);
     obj_controller.mode = "Placement";
+    obj_controller.endPointReaches = 0;
     image_index = 0;
 }
 </string>
