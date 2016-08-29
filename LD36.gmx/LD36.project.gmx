@@ -266,6 +266,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start</room>
+    <room>rooms\rm_lvl8</room>
     <room>rooms\rm_levelselect1</room>
     <room>rooms\rm_lvl1</room>
     <room>rooms\rm_lvl2</room>
@@ -274,7 +275,6 @@
     <room>rooms\rm_lvl5</room>
     <room>rooms\rm_lvl6</room>
     <room>rooms\rm_lvl7</room>
-    <room>rooms\rm_lvl8</room>
     <room>rooms\rm_lvl9</room>
     <room>rooms\rm_lvl10</room>
     <room>rooms\rm_lvl11</room>
