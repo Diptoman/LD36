@@ -230,6 +230,10 @@ if (isOriginal)
     ds_list_add(obj_controller.initParticleY,starty);
     ds_list_add(obj_controller.initParticleDir,currentDirection);
     ds_list_add(obj_controller.initParticleType,type);
+    /*if (type == "+")
+        ds_list_add(obj_controller.initParticleType,1);
+    else
+        ds_list_add(obj_controller.initParticleType,0);*/
 }
 </string>
           </argument>

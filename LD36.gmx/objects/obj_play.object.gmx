@@ -61,14 +61,17 @@ if (obj_controller.mode == "Placement")
     }
     image_index = 1;
 }
-else
+else if (obj_controller.mode == "Play")
 {
     obj_controller.mode = "Placement";
     
-    for(i = 0;i &lt; ds_list_size(obj_controller.particleList);i=i)
+    for(i = 0;i &lt; ds_list_size(obj_controller.particleList);i--)
     {
         //Delete old
-        with (ds_list_find_value(obj_controller.particleList,0)) instance_destroy();
+        if (instance_exists(ds_list_find_value(obj_controller.particleList,0)))
+            with (ds_list_find_value(obj_controller.particleList,0)) instance_destroy();
+            
+        i++;
     }
     
     //Reset all splitter positions
@@ -87,12 +90,11 @@ else
     }
     
     //Reset neutral masses
-    //show_message(string(instance_number(obj_neutralParticle)));
-    for(i = 0;i &lt; instance_number(obj_neutralParticle);i=i)
+    iNum = instance_number(obj_neutralParticle);
+    for(i = 0;i &lt; iNum;i++)
     {
-        neutral = instance_find(obj_neutralParticle,0);
+        neutral = instance_find(obj_neutralParticle,i);
         with (neutral) instance_destroy();
-        //show_message(string(i));
     }
     
     //Create new (reset)
@@ -100,7 +102,12 @@ else
     {
         newPart = instance_create(ds_list_find_value(obj_controller.initParticleX,i),ds_list_find_value(obj_controller.initParticleY,i),obj_particle);
         newPart.currentDirection = ds_list_find_value(obj_controller.initParticleDir,i);
+        //type = ds_list_find_value(obj_controller.initParticleType,i);
         newPart.type = ds_list_find_value(obj_controller.initParticleType,i);
+        /*if (type == 0)
+            newPart.type = "-";
+        else
+            newPart.type = "+";*/
         newPart.isOriginal = false;
     }
     ds_list_clear(obj_controller.particleList);
