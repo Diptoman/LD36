@@ -140,6 +140,8 @@ if ((!decisionMade) && (canMove) && (checkForCollisions))
             instance_create(x,y,obj_neutralParticle);
             alarm[2] = 1; //Destroy this
             canMove = false;
+            
+            otherParticle.alarm[6] = 1;
         }
     
     }
@@ -260,6 +262,8 @@ if ((!decisionMade) && (canMove))
             instance_create(x,y,obj_neutralParticle);
             canMove = false;
             alarm[2] = 1; //Destroy this
+            
+            otherParticle.alarm[6] = 1;
         }
     }
 }

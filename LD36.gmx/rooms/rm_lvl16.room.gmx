@@ -268,6 +268,7 @@
     <instance objName="obj_blankArea" x="896" y="96" name="inst_71DCCA19" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_luPath_UI" x="1120" y="288" name="inst_1D29E494" locked="0" code="num = 1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ruSplitter_UI" x="1056" y="224" name="inst_85770052" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_startArrowUp" x="96" y="608" name="inst_29141F06" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

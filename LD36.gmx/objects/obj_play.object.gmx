@@ -51,7 +51,6 @@ instance_create(x+224,y,obj_speedControl);
           <argument>
             <kind>1</kind>
             <string>//Play or Stop
-event_inherited();
 if (obj_controller.mode == "Placement")
 {
     obj_controller.mode = "Play";
@@ -64,6 +63,8 @@ if (obj_controller.mode == "Placement")
 }
 else
 {
+    obj_controller.mode = "Placement";
+    
     for(i = 0;i &lt; ds_list_size(obj_controller.particleList);i=i)
     {
         //Delete old
@@ -103,10 +104,11 @@ else
         newPart.isOriginal = false;
     }
     ds_list_clear(obj_controller.particleList);
-    obj_controller.mode = "Placement";
     obj_controller.endPointReaches = 0;
     image_index = 0;
 }
+
+event_inherited();
 </string>
           </argument>
         </arguments>

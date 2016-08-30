@@ -117,7 +117,7 @@ else
         alarm[0] = 130;
         audio_pause_sound(snd_bg);
         audio_play_sound(snd_finish,10,0);
-        audio_sound_gain(snd_finish,.5,0);
+        audio_sound_gain(snd_finish,.75,0);
 
     }
 }
@@ -147,7 +147,7 @@ else
 if ((mode == "Placement"))
 {
     blankArea = collision_point(floor((mouse_x+16)/32)*32, floor((mouse_y+16)/32)*32,obj_blankArea,0,0);
-    if ((mouse_x &lt; 928) //Mouse to the left
+    if ((mouse_x &lt; 976) //Mouse to the left
     &amp;&amp; (blankArea)) //Mouse is over blank space
     {
         if (blankArea.isFilled)
@@ -206,7 +206,7 @@ if ((mode == "Placement"))
             <string>///Selection mode placement
 if ((mode == "Placement") &amp;&amp; (currentSelection != ""))
 {
-    if ((mouse_x &lt; 928) //Mouse to the left
+    if ((mouse_x &lt; 976) //Mouse to the left
     &amp;&amp; (currentSelectionID.num &gt; 0) //Spare tiles available
     &amp;&amp; (collision_point(floor((mouse_x+16)/32)*32, floor((mouse_y+16)/32)*32,obj_blankArea,0,0))) //Mouse is over blank space
     {
@@ -353,7 +353,7 @@ if (mode == "Placement")
 {
     toDrawSprite = -1;
     toDrawSubImage = 0;
-    if (mouse_x &lt; 960)
+    if (mouse_x &lt; 976)
     {
         switch(currentSelection)
         {
@@ -409,6 +409,29 @@ if (mode == "Placement")
         //show_message("LOL");
     }
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="70">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>window_set_fullscreen(!window_get_fullscreen());
 </string>
           </argument>
         </arguments>
